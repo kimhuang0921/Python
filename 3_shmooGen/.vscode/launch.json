@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug mainpack",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/generate_shmoo_flows.py",
+            "console": "integratedTerminal",  // ✅ 這行很重要
+            "args": [
+                "--input", "shmooinput.csv"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+﻿Shmoo_flow_name,Pattern_Name, X_signal, X_Voltage_Start, X_Voltage_Stop, X_Step, Y_signal, Y_Voltage_Start, Y_Voltage_Stop, Y_Step, Tracking_Pattern, Tracking_Signal
+shmoo_flow6,gapsq3_sz131072_of0_i1000_imm0xfffb_gap0_bup_cf_info_051725_1,VDD_CPU,1.2,0.7,5,per_AllRefClkPins10ns_wvt,2.00E-08,1.00E-08,2,load_runtime_050825_1,per_AllRefClkPins10ns_wvt
+shmoo_flow7,gapsq3_sz131072_of0_i1000_imm0xfffb_gap0_bup_cf_info_051725_1,VDD_CPU,1.2,0.7,5,per_AllRefClkPins10ns_wvt,2.00E-08,1.00E-08,2,load_runtime_050825_1,per_AllRefClkPins10ns_wvt
+shmoo_flow8,gapsq3_sz131072_of0_i1000_imm0xfffb_gap0_bup_cf_info_051725_1,VDD_CPU,1.2,0.7,5,per_AllRefClkPins10ns_wvt,2.00E-08,1.00E-08,2,load_runtime_050825_1,per_AllRefClkPins10ns_wvt
+shmoo_flow9,gapsq3_sz131072_of0_i1000_imm0xfffb_gap0_bup_cf_info_051725_1,VDD_CPU,1.2,0.7,5,per_AllRefClkPins10ns_wvt,2.00E-08,1.00E-08,2,load_runtime_050825_1,per_AllRefClkPins10ns_wvt
+shmoo_flow10,gapsq3_sz131072_of0_i1000_imm0xfffb_gap0_bup_cf_info_051725_1,VDD_CPU,1.2,0.7,5,per_AllRefClkPins10ns_wvt,2.00E-08,1.00E-08,2,load_runtime_050825_1,per_AllRefClkPins10ns_wvt
+shmoo_flow11,gapsq3_sz131072_of0_i1000_imm0xfffb_gap0_bup_cf_info_051725_1,VDD_CPU,1.2,0.7,5,per_AllRefClkPins10ns_wvt,2.00E-08,1.00E-08,2,load_runtime_050825_1,per_AllRefClkPins10ns_wvt
+shmoo_flow12,gapsq3_sz131072_of0_i1000_imm0xfffb_gap0_bup_cf_info_051725_1,VDD_CPU,1.2,0.7,5,per_AllRefClkPins10ns_wvt,2.00E-08,1.00E-08,2,load_runtime_050825_1,per_AllRefClkPins10ns_wvt
+shmoo_flow13,gapsq3_sz131072_of0_i1000_imm0xfffb_gap0_bup_cf_info_051725_1,VDD_CPU,1.2,0.7,5,per_AllRefClkPins10ns_wvt,2.00E-08,1.00E-08,2,load_runtime_050825_1,per_AllRefClkPins10ns_wvt
+shmoo_flow14,gapsq3_sz131072_of0_i1000_imm0xfffb_gap0_bup_cf_info_051725_1,VDD_CPU,1.2,0.7,5,per_AllRefClkPins10ns_wvt,2.00E-08,1.00E-08,2,load_runtime_050825_1,per_AllRefClkPins10ns_wvt
+shmoo_flow15,gapsq3_sz131072_of0_i1000_imm0xfffb_gap0_bup_cf_info_051725_1,VDD_CPU,1.2,0.7,5,per_AllRefClkPins10ns_wvt,2.00E-08,1.00E-08,2,load_runtime_050825_1,per_AllRefClkPins10ns_wvt
+shmoo_flow16,gapsq3_sz131072_of0_i1000_imm0xfffb_gap0_bup_cf_info_051725_1,VDD_CPU,1.2,0.7,5,per_AllRefClkPins10ns_wvt,2.00E-08,1.00E-08,2,load_runtime_050825_1,per_AllRefClkPins10ns_wvt

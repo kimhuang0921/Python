@@ -1,0 +1,13 @@
+{
+  "remote_dir": "/projects/ga0/patterns",
+  "release_root": "/projects/ga0/patterns/release",
+  "local_dir": "local",
+  "enable_ssh": false,
+  "attachments": ["README.txt"],
+  "email": {
+    "from": "kimhuang@rivosinc.com",
+    "password": "ysws wbry yjky ytpv",
+    "to": [
+    ]
+  }
+}
