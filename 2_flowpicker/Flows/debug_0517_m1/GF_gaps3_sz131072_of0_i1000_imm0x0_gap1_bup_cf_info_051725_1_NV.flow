@@ -1,0 +1,48 @@
+flow GF_gaps3_sz131072_of0_i1000_imm0x0_gap1_bup_cf_info_051725_1_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite rv_top_pad_reset_40ns_042325_7 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0517_m1.rv_top_pad_reset_40ns_042325_7.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0517_m1.rv_top_pad_reset_40ns_042325_7.rv_top_pad_reset_40ns_042325_7_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_top_volatilerawunlock_40ns_041625_3 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0517_m1.rv_top_volatilerawunlock_40ns_041625_3.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0517_m1.rv_top_volatilerawunlock_40ns_041625_3.rv_top_volatilerawunlock_40ns_041625_3_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite load_runtime_050825_1 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0517_m1.load_runtime_050825_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0517_m1.load_runtime_050825_1.load_runtime_050825_1_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite gaps3_sz131072_of0_i1000_imm0x0_gap1_bup_cf_info_051725_1_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0517_m1.gaps3_sz131072_of0_i1000_imm0x0_gap1_bup_cf_info_051725_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0517_m1.gaps3_sz131072_of0_i1000_imm0x0_gap1_bup_cf_info_051725_1.gaps3_sz131072_of0_i1000_imm0x0_gap1_bup_cf_info_051725_1_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+	}
+	execute {
+		rv_top_pad_reset_40ns_042325_7.execute();
+
+		rv_top_volatilerawunlock_40ns_041625_3.execute();
+
+		load_runtime_050825_1.execute();
+
+		gaps3_sz131072_of0_i1000_imm0x0_gap1_bup_cf_info_051725_1_NV.execute();
+
+	}
+}

@@ -1,0 +1,10 @@
+flow DEBUG_0502_boot {
+    setup{
+        flow GF_bootrom_brkp_single_no_fatal_spi_host_init_NV calls Flows.DEBUG_0502_boot.GF_bootrom_brkp_single_no_fatal_spi_host_init_NV{}
+        flow GF_bootrom_brkp_list_no_fatal_spi_host_init_NV calls Flows.DEBUG_0502_boot.GF_bootrom_brkp_list_no_fatal_spi_host_init_NV{}
+    }
+    execute {
+        GF_bootrom_brkp_single_no_fatal_spi_host_init_NV.execute();
+        GF_bootrom_brkp_list_no_fatal_spi_host_init_NV.execute();
+    }
+}

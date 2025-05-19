@@ -1,0 +1,35 @@
+flow MainFlow {
+    setup{
+//        flow GF_PCS0_PHY0_pllbist_gen1_2_bootload_NV calls Flows.debug_0514_n2.GF_PCS0_PHY0_pllbist_gen1_2_bootload_NV{}
+//        flow GF_PCS0_PHY0_pllbist_pcie_gen1_2_NV calls Flows.debug_0514_n2.GF_PCS0_PHY0_pllbist_pcie_gen1_2_NV{}
+//        flow GF_PCS0_PHY1_pllbist_pcie_gen1_2_NV calls Flows.debug_0514_n2.GF_PCS0_PHY1_pllbist_pcie_gen1_2_NV{}
+//        flow GF_rv_dpa_PeClkFnom_tdr_NV calls Flows.debug_0514_n2.GF_rv_dpa_PeClkFnom_tdr_NV{}
+//        flow GF_rv_dpa_PeClkFmin_tdr_NV calls Flows.debug_0514_n2.GF_rv_dpa_PeClkFmin_tdr_NV{}
+//        flow GF_rv_dpa_PeClkFmax_tdr_NV calls Flows.debug_0514_n2.GF_rv_dpa_PeClkFmax_tdr_NV{}
+//        flow GF_PCS0_PHY0_pllbist_gen1_2_no_bl_NV calls Flows.debug_0514_n2.GF_PCS0_PHY0_pllbist_gen1_2_no_bl_NV{}
+//        flow GF_PCS0_PHY0_pllbist_gen1_2_no_bl_no_loop_NV calls Flows.debug_0514_n2.GF_PCS0_PHY0_pllbist_gen1_2_no_bl_no_loop_NV{}
+        flow GF_lui_4KB_ofst0KB_core0_NV calls Flows.debug_0514_n2.GF_lui_4KB_ofst0KB_core0_NV{}
+        flow GF_lui_4KB_ofst1KB_core0_NV calls Flows.debug_0514_n2.GF_lui_4KB_ofst1KB_core0_NV{}
+        flow GF_lui_64KB_ofst256B_core0_NV calls Flows.debug_0514_n2.GF_lui_64KB_ofst256B_core0_NV{}
+        flow GF_lui_sz32768_of0_i100_core0_NV calls Flows.debug_0514_n2.GF_lui_sz32768_of0_i100_core0_NV{}
+        flow GF_lui_sz32768_of5120_i100_core0_NV calls Flows.debug_0514_n2.GF_lui_sz32768_of5120_i100_core0_NV{}
+        flow GF_return_from_main_NV calls Flows.debug_0514_n2.GF_return_from_main_NV{}
+    }
+    execute {
+//		GF_PCS0_PHY0_pllbist_gen1_2_bootload_NV.execute();
+//		GF_PCS0_PHY0_pllbist_pcie_gen1_2_NV.execute();
+//		GF_PCS0_PHY1_pllbist_pcie_gen1_2_NV.execute();
+//		GF_rv_dpa_PeClkFnom_tdr_NV.execute();
+//		GF_rv_dpa_PeClkFmin_tdr_NV.execute();
+//		GF_rv_dpa_PeClkFmax_tdr_NV.execute();
+//		GF_PCS0_PHY0_pllbist_gen1_2_no_bl_NV.execute();
+//		GF_PCS0_PHY0_pllbist_gen1_2_no_bl_no_loop_NV.execute();
+        GF_return_from_main_NV.execute();
+        GF_lui_4KB_ofst0KB_core0_NV.execute();
+        GF_lui_4KB_ofst1KB_core0_NV.execute();
+        GF_lui_64KB_ofst256B_core0_NV.execute();
+        GF_lui_sz32768_of0_i100_core0_NV.execute();
+        GF_lui_sz32768_of5120_i100_core0_NV.execute();
+
+    }
+}

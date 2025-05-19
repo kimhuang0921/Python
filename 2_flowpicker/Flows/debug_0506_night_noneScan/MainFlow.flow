@@ -1,0 +1,62 @@
+flow MainFlow {
+    setup{
+        flow GF_DMS0_3200_1to2_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS0_3200_1to2_SpmEnable_NV{}
+        flow GF_DMS0_3200_1to4_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS0_3200_1to4_SpmEnable_NV{}
+        flow GF_DMS0_6080_1to2_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS0_6080_1to2_SpmEnable_NV{}
+        flow GF_DMS0_6400_1to4_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS0_6400_1to4_SpmEnable_NV{}
+        flow GF_DMS0_7200_1to4_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS0_7200_1to4_SpmEnable_NV{}
+        flow GF_DMS0_8400_1to4_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS0_8400_1to4_SpmEnable_NV{}
+        flow GF_DMS1_3200_1to2_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS1_3200_1to2_SpmEnable_NV{}
+        flow GF_DMS1_3200_1to4_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS1_3200_1to4_SpmEnable_NV{}
+        flow GF_DMS1_6080_1to2_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS1_6080_1to2_SpmEnable_NV{}
+        flow GF_DMS1_6400_1to4_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS1_6400_1to4_SpmEnable_NV{}
+        flow GF_DMS1_7200_1to4_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS1_7200_1to4_SpmEnable_NV{}
+        flow GF_DMS1_8400_1to4_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS1_8400_1to4_SpmEnable_NV{}
+        flow GF_DMS2_3200_1to2_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS2_3200_1to2_SpmEnable_NV{}
+        flow GF_DMS2_3200_1to4_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS2_3200_1to4_SpmEnable_NV{}
+        flow GF_DMS2_6080_1to2_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS2_6080_1to2_SpmEnable_NV{}
+        flow GF_DMS2_6400_1to4_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS2_6400_1to4_SpmEnable_NV{}
+        flow GF_DMS2_7200_1to4_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS2_7200_1to4_SpmEnable_NV{}
+        flow GF_DMS2_8400_1to4_SpmEnable_NV calls Flows.debug_0506_night_noneScan.GF_DMS2_8400_1to4_SpmEnable_NV{}
+        flow GF_matmul_NV calls Flows.debug_0506_night_noneScan.GF_matmul_NV{}
+        flow GF_dhry_brpt_NV calls Flows.debug_0506_night_noneScan.GF_dhry_brpt_NV{}
+        flow GF_dhrystone_c0_NV calls Flows.debug_0506_night_noneScan.GF_dhrystone_c0_NV{}
+        flow GF_dhrystone_c1_NV calls Flows.debug_0506_night_noneScan.GF_dhrystone_c1_NV{}
+        flow GF_dhrystone_c2_NV calls Flows.debug_0506_night_noneScan.GF_dhrystone_c2_NV{}
+        flow GF_dhrystone_c3_NV calls Flows.debug_0506_night_noneScan.GF_dhrystone_c3_NV{}
+        flow GF_bootrom_bootstrap_NV calls Flows.debug_0506_night_noneScan.GF_bootrom_bootstrap_NV{}
+        flow GF_bootrom_rom_patch_NV calls Flows.debug_0506_night_noneScan.GF_bootrom_rom_patch_NV{}
+        flow GF_bootrom_otp_remap_NV calls Flows.debug_0506_night_noneScan.GF_bootrom_otp_remap_NV{}
+        flow GF_rv_hcs_FabClkFnom_tdr_40ns_NV calls Flows.debug_0506_night_noneScan.GF_rv_hcs_FabClkFnom_tdr_40ns_NV{}
+    }
+    execute {
+        /*GF_DMS0_3200_1to2_SpmEnable_NV.execute();
+        GF_DMS0_3200_1to4_SpmEnable_NV.execute();
+        GF_DMS0_6080_1to2_SpmEnable_NV.execute();
+        GF_DMS0_6400_1to4_SpmEnable_NV.execute();
+        GF_DMS0_7200_1to4_SpmEnable_NV.execute();
+        GF_DMS0_8400_1to4_SpmEnable_NV.execute();
+        GF_DMS1_3200_1to2_SpmEnable_NV.execute();
+        GF_DMS1_3200_1to4_SpmEnable_NV.execute();
+        GF_DMS1_6080_1to2_SpmEnable_NV.execute();
+        GF_DMS1_6400_1to4_SpmEnable_NV.execute();
+        GF_DMS1_7200_1to4_SpmEnable_NV.execute();
+        GF_DMS1_8400_1to4_SpmEnable_NV.execute();
+        GF_DMS2_3200_1to2_SpmEnable_NV.execute();
+        GF_DMS2_3200_1to4_SpmEnable_NV.execute();
+        GF_DMS2_6080_1to2_SpmEnable_NV.execute();
+        GF_DMS2_6400_1to4_SpmEnable_NV.execute();
+        GF_DMS2_7200_1to4_SpmEnable_NV.execute();
+        GF_DMS2_8400_1to4_SpmEnable_NV.execute();*/
+        GF_matmul_NV.execute();
+        GF_dhry_brpt_NV.execute();
+        GF_dhrystone_c0_NV.execute();
+        GF_dhrystone_c1_NV.execute();
+        GF_dhrystone_c2_NV.execute();
+        GF_dhrystone_c3_NV.execute();
+        GF_bootrom_bootstrap_NV.execute();
+        GF_bootrom_rom_patch_NV.execute();
+        GF_bootrom_otp_remap_NV.execute();
+        GF_rv_hcs_FabClkFnom_tdr_40ns_NV.execute();
+    }
+}

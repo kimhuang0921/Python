@@ -1,0 +1,44 @@
+flow n2 {
+	setup{
+		flow GF_rv_dms_DmcClkFnom_tdr_40ns_NV calls Flows.debug_0508_n1_Scan.GF_rv_dms_DmcClkFnom_tdr_40ns_NV{}
+		flow GF_rv_hms_HmcClkFnom_tdr_40ns_NV calls Flows.debug_0508_n1_Scan.GF_rv_hms_HmcClkFnom_tdr_40ns_NV{}
+		flow GF_rv_hms_HmcClkFmin_tdr_40ns_NV calls Flows.debug_0508_n1_Scan.GF_rv_hms_HmcClkFmin_tdr_40ns_NV{}
+		flow GF_rv_hms_HmcClkFmax_tdr_40ns_NV calls Flows.debug_0508_n1_Scan.GF_rv_hms_HmcClkFmax_tdr_40ns_NV{}
+		flow GF_rv_hms_HmcClkFnom_only_tdr_NV calls Flows.debug_0508_n1_Scan.GF_rv_hms_HmcClkFnom_only_tdr_NV{}
+		flow GF_rv_nsEfuse_basic_rd_only_40ns_NV calls Flows.debug_0508_n1_Scan.GF_rv_nsEfuse_basic_rd_only_40ns_NV{}
+		flow GF_rv_nsEfuse_basic_40ns_NV calls Flows.debug_0508_n1_Scan.GF_rv_nsEfuse_basic_40ns_NV{}
+		flow GF_dhry_trap_brpt_NV calls Flows.debug_0508_n1_Scan.GF_dhry_trap_brpt_NV{}
+		flow GF_DMS0_6400_1to4_LoadMsgBlock_corelb_NV calls Flows.debug_0508_n1_Scan.GF_DMS0_6400_1to4_LoadMsgBlock_corelb_NV{}
+		flow GF_DMS0_6400_1to4_LoadMsgBlock_padlb_NV calls Flows.debug_0508_n1_Scan.GF_DMS0_6400_1to4_LoadMsgBlock_padlb_NV{}
+		flow GF_DMS1_6400_1to4_LoadMsgBlock_corelb_NV calls Flows.debug_0508_n1_Scan.GF_DMS1_6400_1to4_LoadMsgBlock_corelb_NV{}
+		flow GF_DMS1_6400_1to4_LoadMsgBlock_padlb_NV calls Flows.debug_0508_n1_Scan.GF_DMS1_6400_1to4_LoadMsgBlock_padlb_NV{}
+		flow GF_DMS2_6400_1to4_LoadMsgBlock_corelb_NV calls Flows.debug_0508_n1_Scan.GF_DMS2_6400_1to4_LoadMsgBlock_corelb_NV{}
+		flow GF_DMS2_6400_1to4_LoadMsgBlock_padlb_NV calls Flows.debug_0508_n1_Scan.GF_DMS2_6400_1to4_LoadMsgBlock_padlb_NV{}
+		flow GF_bootrom_second_rom_rom_patch_NV calls Flows.debug_0508_n1_Scan.GF_bootrom_second_rom_rom_patch_NV{}
+		flow GF_bootrom_second_rom_rom_patch_gpio20_NV calls Flows.debug_0508_n1_Scan.GF_bootrom_second_rom_rom_patch_gpio20_NV{}
+		flow GF_otp_vendor_test_read_NV calls Flows.debug_0508_n1_Scan.GF_otp_vendor_test_read_NV{}
+		flow GF_otp_vendor_test_write_NV calls Flows.debug_0508_n1_Scan.GF_otp_vendor_test_write_NV{}
+		flow GF_load_pwc_NV calls Flows.debug_0508_n1_Scan.GF_load_pwc_NV{}
+	}
+	execute {
+		GF_rv_dms_DmcClkFnom_tdr_40ns_NV.execute();
+		GF_rv_hms_HmcClkFnom_tdr_40ns_NV.execute();
+		GF_rv_hms_HmcClkFmin_tdr_40ns_NV.execute();
+		GF_rv_hms_HmcClkFmax_tdr_40ns_NV.execute();
+		GF_rv_hms_HmcClkFnom_only_tdr_NV.execute();
+		GF_rv_nsEfuse_basic_rd_only_40ns_NV.execute();
+		GF_rv_nsEfuse_basic_40ns_NV.execute();
+		GF_dhry_trap_brpt_NV.execute();
+		GF_DMS0_6400_1to4_LoadMsgBlock_corelb_NV.execute();
+		GF_DMS0_6400_1to4_LoadMsgBlock_padlb_NV.execute();
+		GF_DMS1_6400_1to4_LoadMsgBlock_corelb_NV.execute();
+		GF_DMS1_6400_1to4_LoadMsgBlock_padlb_NV.execute();
+		GF_DMS2_6400_1to4_LoadMsgBlock_corelb_NV.execute();
+		GF_DMS2_6400_1to4_LoadMsgBlock_padlb_NV.execute();
+		GF_bootrom_second_rom_rom_patch_NV.execute();
+		GF_bootrom_second_rom_rom_patch_gpio20_NV.execute();
+		GF_otp_vendor_test_read_NV.execute();
+		GF_otp_vendor_test_write_NV.execute();
+		GF_load_pwc_NV.execute();
+	}
+}

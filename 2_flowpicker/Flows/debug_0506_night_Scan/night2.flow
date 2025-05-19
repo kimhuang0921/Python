@@ -1,0 +1,66 @@
+flow night2 {
+    setup{
+        flow GF_rv_gdie_bscan_actest_dbg_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_actest_dbg_pcs1_NV{}
+        flow GF_rv_gdie_bscan_extest_dbg_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_extest_dbg_pcs1_NV{}
+        flow GF_rv_gdie_bscan_highz_dbg_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_highz_dbg_pcs1_NV{}
+        flow GF_rv_gdie_bscan_idcode_dbg_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_idcode_dbg_pcs1_NV{}
+        flow GF_rv_gdie_bscan_preamb_dbg_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_preamb_dbg_pcs1_NV{}
+        flow GF_rv_gdie_bscan_preload_dbg_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_preload_dbg_pcs1_NV{}
+        flow GF_rv_gdie_bscan_sample_dbg_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_sample_dbg_pcs1_NV{}
+        flow GF_rv_gdie_bscan_test_dbg_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_test_dbg_pcs1_NV{}
+        flow GF_rv_gdie_bscan_test_dbg_a0dis_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_test_dbg_a0dis_pcs1_NV{}
+        flow GF_rv_gdie_bscan_sample_dbg_a0dis_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_sample_dbg_a0dis_pcs1_NV{}
+        flow GF_rv_gdie_bscan_preload_dbg_a0dis_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_preload_dbg_a0dis_pcs1_NV{}
+        flow GF_rv_gdie_bscan_preamb_dbg_a0dis_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_preamb_dbg_a0dis_pcs1_NV{}
+        flow GF_rv_gdie_bscan_idcode_dbg_a0dis_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_idcode_dbg_a0dis_pcs1_NV{}
+        flow GF_rv_gdie_bscan_highz_dbg_a0dis_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_highz_dbg_a0dis_pcs1_NV{}
+        flow GF_rv_gdie_bscan_extest_dbg_a0dis_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_extest_dbg_a0dis_pcs1_NV{}
+        flow GF_rv_gdie_bscan_actest_dbg_a0dis_pcs1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_actest_dbg_a0dis_pcs1_NV{}
+        flow GF_rv_gdie_bscan_extest_dbg_dms1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_extest_dbg_dms1_NV{}
+        flow GF_rv_gdie_bscan_highz_dbg_dms1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_highz_dbg_dms1_NV{}
+        flow GF_rv_gdie_bscan_idcode_dbg_dms1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_idcode_dbg_dms1_NV{}
+        flow GF_rv_gdie_bscan_preamb_dbg_dms1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_preamb_dbg_dms1_NV{}
+        flow GF_rv_gdie_bscan_preload_dbg_dms1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_preload_dbg_dms1_NV{}
+        flow GF_rv_gdie_bscan_sample_dbg_dms1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_sample_dbg_dms1_NV{}
+        flow GF_rv_gdie_bscan_test_dbg_dms1_NV calls Flows.debug_0506_night_Scan.GF_rv_gdie_bscan_test_dbg_dms1_NV{}
+//        flow GF_bootrom_bootstrap_NV calls Flows.debug_0506_night_Scan.GF_bootrom_bootstrap_NV{}
+//        flow GF_bootrom_spi_host_reset_NV calls Flows.debug_0506_night_Scan.GF_bootrom_spi_host_reset_NV{}
+//        flow GF_bootrom_second_rom_main_NV calls Flows.debug_0506_night_Scan.GF_bootrom_second_rom_main_NV{}
+//        flow GF_bootrom_second_rom_preamble_NV calls Flows.debug_0506_night_Scan.GF_bootrom_second_rom_preamble_NV{}
+//        flow GF_bootrom_second_rom_epilogue_NV calls Flows.debug_0506_night_Scan.GF_bootrom_second_rom_epilogue_NV{}
+//        flow GF_matmul_NV calls Flows.debug_0506_night_Scan.GF_matmul_NV{}
+//        flow GF_rv_hcs_FabClkFnom_tdr_40ns_NV calls Flows.debug_0506_night_Scan.GF_rv_hcs_FabClkFnom_tdr_40ns_NV{}
+    }
+    execute {
+        GF_rv_gdie_bscan_actest_dbg_pcs1_NV.execute();
+        GF_rv_gdie_bscan_extest_dbg_pcs1_NV.execute();
+        GF_rv_gdie_bscan_highz_dbg_pcs1_NV.execute();
+        GF_rv_gdie_bscan_idcode_dbg_pcs1_NV.execute();
+        GF_rv_gdie_bscan_preamb_dbg_pcs1_NV.execute();
+        GF_rv_gdie_bscan_preload_dbg_pcs1_NV.execute();
+        GF_rv_gdie_bscan_sample_dbg_pcs1_NV.execute();
+        GF_rv_gdie_bscan_test_dbg_pcs1_NV.execute();
+        GF_rv_gdie_bscan_test_dbg_a0dis_pcs1_NV.execute();
+        GF_rv_gdie_bscan_sample_dbg_a0dis_pcs1_NV.execute();
+        GF_rv_gdie_bscan_preload_dbg_a0dis_pcs1_NV.execute();
+        GF_rv_gdie_bscan_preamb_dbg_a0dis_pcs1_NV.execute();
+        GF_rv_gdie_bscan_idcode_dbg_a0dis_pcs1_NV.execute();
+        GF_rv_gdie_bscan_highz_dbg_a0dis_pcs1_NV.execute();
+        GF_rv_gdie_bscan_extest_dbg_a0dis_pcs1_NV.execute();
+        GF_rv_gdie_bscan_actest_dbg_a0dis_pcs1_NV.execute();
+        GF_rv_gdie_bscan_extest_dbg_dms1_NV.execute();
+        GF_rv_gdie_bscan_highz_dbg_dms1_NV.execute();
+        GF_rv_gdie_bscan_idcode_dbg_dms1_NV.execute();
+        GF_rv_gdie_bscan_preamb_dbg_dms1_NV.execute();
+        GF_rv_gdie_bscan_preload_dbg_dms1_NV.execute();
+        GF_rv_gdie_bscan_sample_dbg_dms1_NV.execute();
+        GF_rv_gdie_bscan_test_dbg_dms1_NV.execute();
+//		GF_bootrom_bootstrap_NV.execute();
+//		GF_bootrom_spi_host_reset_NV.execute();
+//		GF_bootrom_second_rom_main_NV.execute();
+//		GF_bootrom_second_rom_preamble_NV.execute();
+//		GF_bootrom_second_rom_epilogue_NV.execute();
+//		GF_matmul_NV.execute();
+//		GF_rv_hcs_FabClkFnom_tdr_40ns_NV.execute();
+    }
+}

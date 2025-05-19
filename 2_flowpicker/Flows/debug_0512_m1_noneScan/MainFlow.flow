@@ -1,0 +1,24 @@
+flow MainFlow {
+    setup{
+        flow GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV calls Flows.debug_0512_m1_noneScan.GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV{}
+        flow GF_hms_0_mbist_2W3R_NV calls Flows.debug_0512_m1_noneScan.GF_hms_0_mbist_2W3R_NV{}
+        flow GF_hms_1_mbist_2W3R_NV calls Flows.debug_0512_m1_noneScan.GF_hms_1_mbist_2W3R_NV{}
+        flow GF_pcs_top0_mbist_2W3R_NV calls Flows.debug_0512_m1_noneScan.GF_pcs_top0_mbist_2W3R_NV{}
+        flow GF_pcs_top1_mbist_2W3R_NV calls Flows.debug_0512_m1_noneScan.GF_pcs_top1_mbist_2W3R_NV{}
+        flow GF_rv_phy_pcs0_config_ctn_40ns_NV calls Flows.DEBUG_0428_afternoon2.GF_rv_phy_pcs0_config_ctn_40ns_NV{}
+        flow GF_rv_phy_pcs1_config_ctn_40ns_NV calls Flows.DEBUG_0428_afternoon2.GF_rv_phy_pcs1_config_ctn_40ns_NV{}
+        flow GF_rvpcs_top0_pdp_phy_mbist_n26_NV calls Flows.debug_0508_m1.GF_rvpcs_top0_pdp_phy_mbist_n26_NV{}
+        flow GF_rvpcs_top1_pdp_phy_mbist_n26_NV calls Flows.debug_0508_m1.GF_rvpcs_top1_pdp_phy_mbist_n26_NV{}
+    }
+    execute {
+        GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV.execute();
+        GF_hms_0_mbist_2W3R_NV.execute();
+        GF_hms_1_mbist_2W3R_NV.execute();
+        GF_pcs_top0_mbist_2W3R_NV.execute();
+        GF_pcs_top1_mbist_2W3R_NV.execute();
+        GF_rv_phy_pcs0_config_ctn_40ns_NV.execute();
+        GF_rvpcs_top0_pdp_phy_mbist_n26_NV.execute();
+        GF_rvpcs_top1_pdp_phy_mbist_n26_NV.execute();
+        GF_rv_phy_pcs1_config_ctn_40ns_NV.execute();
+    }
+}

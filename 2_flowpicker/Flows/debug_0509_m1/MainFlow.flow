@@ -1,0 +1,26 @@
+flow MainFlow {
+	setup{
+		flow GF_bootrom_bootstrap_NV calls Flows.debug_0509_m1.GF_bootrom_bootstrap_NV{}
+		flow GF_otp_vendor_test_read_NV calls Flows.debug_0509_m1.GF_otp_vendor_test_read_NV{}
+		flow GF_bootrom_second_rom_rom_patch_NV calls Flows.debug_0509_m1.GF_bootrom_second_rom_rom_patch_NV{}
+		flow GF_bootrom_second_rom_rom_patch_gpio20_NV calls Flows.debug_0509_m1.GF_bootrom_second_rom_rom_patch_gpio20_NV{}
+		flow GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV calls Flows.debug_0509_m1.GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV{}
+		flow GF_bootrom_second_rom_rom_patch_sram_brkp_NV calls Flows.debug_0509_m1.GF_bootrom_second_rom_rom_patch_sram_brkp_NV{}
+		flow GF_load_pwc_NV calls Flows.debug_0509_m1.GF_load_pwc_NV{}
+		flow GF_rva_llch_grid_east_MC1_mbist_4N_2W3R_NV calls Flows.debug_0509_m1.GF_rva_llch_grid_east_MC1_mbist_4N_2W3R_NV{}
+		flow GF_rva_llch_grid_east_MC1_mbist_4N_WWWRRR_NV calls Flows.debug_0509_m1.GF_rva_llch_grid_east_MC1_mbist_4N_WWWRRR_NV{}
+		flow GF_rv_dms_DmcClkFnom_tdr_NV calls Flows.debug_0509_m1.GF_rv_dms_DmcClkFnom_tdr_NV{}
+	}
+	execute {
+		GF_bootrom_bootstrap_NV.execute();
+		GF_otp_vendor_test_read_NV.execute();
+		GF_bootrom_second_rom_rom_patch_NV.execute();
+		GF_bootrom_second_rom_rom_patch_gpio20_NV.execute();
+		GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV.execute();
+		GF_bootrom_second_rom_rom_patch_sram_brkp_NV.execute();
+		GF_load_pwc_NV.execute();
+		GF_rva_llch_grid_east_MC1_mbist_4N_2W3R_NV.execute();
+		GF_rva_llch_grid_east_MC1_mbist_4N_WWWRRR_NV.execute();
+		GF_rv_dms_DmcClkFnom_tdr_NV.execute();
+	}
+}

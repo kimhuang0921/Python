@@ -1,0 +1,14 @@
+flow MainFlow {
+	setup{
+		flow GF_sign_of_life_2pe_NV calls Flows.debug_0507_pm2.GF_sign_of_life_2pe_NV{}
+		flow GF_lram_dma_512K_32K_NV calls Flows.debug_0507_pm2.GF_lram_dma_512K_32K_NV{}
+		flow GF_dhrystone_mmode_NV calls Flows.debug_0507_pm2.GF_dhrystone_mmode_NV{}
+		flow GF_bootrom_second_rom_rom_patch_5s_NV calls Flows.debug_0507_pm2.GF_bootrom_second_rom_rom_patch_5s_NV{}
+	}
+	execute {
+		GF_sign_of_life_2pe_NV.execute();
+		GF_lram_dma_512K_32K_NV.execute();
+		GF_dhrystone_mmode_NV.execute();
+		GF_bootrom_second_rom_rom_patch_5s_NV.execute();
+	}
+}

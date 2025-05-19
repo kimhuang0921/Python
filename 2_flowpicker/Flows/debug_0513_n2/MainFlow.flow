@@ -1,0 +1,58 @@
+flow MainFlow {
+	setup{
+		flow GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV calls Flows.debug_0513_n2.GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV{}
+		flow GF_rva_llch_grid_channel_east_wrapper_mbist_2W3R_NOP_N20_NV calls Flows.debug_0513_n2.GF_rva_llch_grid_channel_east_wrapper_mbist_2W3R_NOP_N20_NV{}
+		flow GF_rva_llch_grid_channel_west_wrapper_mbist_2W3R_NOP_N20_NV calls Flows.debug_0513_n2.GF_rva_llch_grid_channel_west_wrapper_mbist_2W3R_NOP_N20_NV{}
+		flow GF_rvgd_fgw_pdp_0_mbist_2W3R_NOP_N20_NV calls Flows.debug_0513_n2.GF_rvgd_fgw_pdp_0_mbist_2W3R_NOP_N20_NV{}
+		flow GF_rvgd_fgw_pdp_1_mbist_2W3R_NOP_N20_NV calls Flows.debug_0513_n2.GF_rvgd_fgw_pdp_1_mbist_2W3R_NOP_N20_NV{}
+		flow GF_rvgd_fgw_pdp_2_mbist_2W3R_NOP_N20_NV calls Flows.debug_0513_n2.GF_rvgd_fgw_pdp_2_mbist_2W3R_NOP_N20_NV{}
+		flow GF_rvgd_fgw_pdp_3_mbist_2W3R_NOP_N20_NV calls Flows.debug_0513_n2.GF_rvgd_fgw_pdp_3_mbist_2W3R_NOP_N20_NV{}
+		flow GF_rv_phy_pcs0_bootload_fw_NV calls Flows.debug_0513_n2.GF_rv_phy_pcs0_bootload_fw_NV{}
+		flow GF_rv_phy_pcs1_bootload_fw_NV calls Flows.debug_0513_n2.GF_rv_phy_pcs1_bootload_fw_NV{}
+		flow GF_PCS0_PHY0_pllbist_gen1_2_bootload_NV calls Flows.debug_0513_n2.GF_PCS0_PHY0_pllbist_gen1_2_bootload_NV{}
+		flow GF_PCS0_PHY0_pllbist_gen1_2_bootload_loop_NV calls Flows.debug_0513_n2.GF_PCS0_PHY0_pllbist_gen1_2_bootload_loop_NV{}
+		flow GF_rv_rcc_rcc_pmd_ssn_loopback_2_NV calls Flows.debug_0513_n2.GF_rv_rcc_rcc_pmd_ssn_loopback_2_NV{}
+		flow GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_2_NV calls Flows.debug_0513_n2.GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_2_NV{}
+		flow GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_2_NV calls Flows.debug_0513_n2.GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_2_NV{}
+		flow GF_rv_rcc_rcc_pmd_ssn_loopback_NV calls Flows.debug_0513_n2.GF_rv_rcc_rcc_pmd_ssn_loopback_NV{}
+		flow GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_NV calls Flows.debug_0513_n2.GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_NV{}
+		flow GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_NV calls Flows.debug_0513_n2.GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_NV{}
+		flow GF_rva_dpa_sub_grid_ddp_x1_feedthrough0_ssn_loopback_NV calls Flows.debug_0513_n2.GF_rva_dpa_sub_grid_ddp_x1_feedthrough0_ssn_loopback_NV{}
+		flow GF_rva_dpa_sub_grid_ddp_x1_feedthrough0_int_sa_chain_edt_pl_NV calls Flows.debug_0513_n2.GF_rva_dpa_sub_grid_ddp_x1_feedthrough0_int_sa_chain_edt_pl_NV{}
+		flow GF_rva_dpa_sub_grid_ddp_x1_feedthrough0_int_sa_scan_edt_pl_NV calls Flows.debug_0513_n2.GF_rva_dpa_sub_grid_ddp_x1_feedthrough0_int_sa_scan_edt_pl_NV{}
+		flow GF_rva_dpa_sub_grid_ddp_x2_feedthrough0_ssn_loopback_NV calls Flows.debug_0513_n2.GF_rva_dpa_sub_grid_ddp_x2_feedthrough0_ssn_loopback_NV{}
+		flow GF_rva_dpa_sub_grid_ddp_x2_feedthrough0_int_sa_chain_edt_pl_NV calls Flows.debug_0513_n2.GF_rva_dpa_sub_grid_ddp_x2_feedthrough0_int_sa_chain_edt_pl_NV{}
+		flow GF_rva_dpa_sub_grid_ddp_x2_feedthrough0_int_sa_scan_edt_pl_NV calls Flows.debug_0513_n2.GF_rva_dpa_sub_grid_ddp_x2_feedthrough0_int_sa_scan_edt_pl_NV{}
+		flow GF_rva_dpa_sub_grid_ddp_x3_feedthrough0_ssn_loopback_NV calls Flows.debug_0513_n2.GF_rva_dpa_sub_grid_ddp_x3_feedthrough0_ssn_loopback_NV{}
+		flow GF_rva_dpa_sub_grid_ddp_x3_feedthrough0_int_sa_chain_edt_pl_NV calls Flows.debug_0513_n2.GF_rva_dpa_sub_grid_ddp_x3_feedthrough0_int_sa_chain_edt_pl_NV{}
+		flow GF_rva_dpa_sub_grid_ddp_x3_feedthrough0_int_sa_scan_edt_pl_NV calls Flows.debug_0513_n2.GF_rva_dpa_sub_grid_ddp_x3_feedthrough0_int_sa_scan_edt_pl_NV{}
+	}
+	execute {
+		GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV.execute();
+		GF_rva_llch_grid_channel_east_wrapper_mbist_2W3R_NOP_N20_NV.execute();
+		GF_rva_llch_grid_channel_west_wrapper_mbist_2W3R_NOP_N20_NV.execute();
+		GF_rvgd_fgw_pdp_0_mbist_2W3R_NOP_N20_NV.execute();
+		GF_rvgd_fgw_pdp_1_mbist_2W3R_NOP_N20_NV.execute();
+		GF_rvgd_fgw_pdp_2_mbist_2W3R_NOP_N20_NV.execute();
+		GF_rvgd_fgw_pdp_3_mbist_2W3R_NOP_N20_NV.execute();
+		GF_rv_phy_pcs0_bootload_fw_NV.execute();
+		GF_rv_phy_pcs1_bootload_fw_NV.execute();
+		GF_PCS0_PHY0_pllbist_gen1_2_bootload_NV.execute();
+		GF_PCS0_PHY0_pllbist_gen1_2_bootload_loop_NV.execute();
+		GF_rv_rcc_rcc_pmd_ssn_loopback_2_NV.execute();
+		GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_2_NV.execute();
+		GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_2_NV.execute();
+		GF_rv_rcc_rcc_pmd_ssn_loopback_NV.execute();
+		GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_NV.execute();
+		GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_NV.execute();
+		GF_rva_dpa_sub_grid_ddp_x1_feedthrough0_ssn_loopback_NV.execute();
+		GF_rva_dpa_sub_grid_ddp_x1_feedthrough0_int_sa_chain_edt_pl_NV.execute();
+		GF_rva_dpa_sub_grid_ddp_x1_feedthrough0_int_sa_scan_edt_pl_NV.execute();
+		GF_rva_dpa_sub_grid_ddp_x2_feedthrough0_ssn_loopback_NV.execute();
+		GF_rva_dpa_sub_grid_ddp_x2_feedthrough0_int_sa_chain_edt_pl_NV.execute();
+		GF_rva_dpa_sub_grid_ddp_x2_feedthrough0_int_sa_scan_edt_pl_NV.execute();
+		GF_rva_dpa_sub_grid_ddp_x3_feedthrough0_ssn_loopback_NV.execute();
+		GF_rva_dpa_sub_grid_ddp_x3_feedthrough0_int_sa_chain_edt_pl_NV.execute();
+		GF_rva_dpa_sub_grid_ddp_x3_feedthrough0_int_sa_scan_edt_pl_NV.execute();
+	}
+}

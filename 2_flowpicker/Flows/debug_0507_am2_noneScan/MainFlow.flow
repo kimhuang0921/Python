@@ -1,0 +1,20 @@
+flow MainFlow {
+	setup{
+		flow GF_dhrystone_smode_NV calls Flows.debug_0507_am2_noneScan.GF_dhrystone_smode_NV{}
+		flow GF_lram_dma_32K_NV calls Flows.debug_0507_am2_noneScan.GF_lram_dma_32K_NV{}
+		flow GF_lram_dma_512k_NV calls Flows.debug_0507_am2_noneScan.GF_lram_dma_512k_NV{}
+		flow GF_load_runtime_NV calls Flows.debug_0507_am2_noneScan.GF_load_runtime_NV{}
+		flow GF_load_full_runtime_NV calls Flows.debug_0507_am2_noneScan.GF_load_full_runtime_NV{}
+		flow GF_bootrom_second_rom_rom_patch_NV calls Flows.debug_0507_am2_noneScan.GF_bootrom_second_rom_rom_patch_NV{}
+        flow GF_return_from_main_1p_NV calls Flows.debug_0507_am.GF_return_from_main_1p_NV{}
+	}
+	execute {
+		GF_dhrystone_smode_NV.execute();
+		GF_lram_dma_32K_NV.execute();
+		GF_lram_dma_512k_NV.execute();
+		GF_load_runtime_NV.execute();
+		GF_load_full_runtime_NV.execute();
+		GF_return_from_main_1p_NV.execute();
+		GF_bootrom_second_rom_rom_patch_NV.execute();
+	}
+}

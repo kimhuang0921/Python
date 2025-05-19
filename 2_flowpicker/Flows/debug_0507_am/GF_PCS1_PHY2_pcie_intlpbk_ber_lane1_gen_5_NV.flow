@@ -1,0 +1,58 @@
+flow GF_PCS1_PHY2_pcie_intlpbk_ber_lane1_gen_5_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite rv_top_pad_reset_40ns_042325_7 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0507_am.rv_top_pad_reset_40ns_042325_7.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0507_am.rv_top_pad_reset_40ns_042325_7.rv_top_pad_reset_40ns_042325_7_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_top_volatilerawunlock_40ns_041625_3 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0507_am.rv_top_volatilerawunlock_40ns_041625_3.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0507_am.rv_top_volatilerawunlock_40ns_041625_3.rv_top_volatilerawunlock_40ns_041625_3_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_scs_resetctn1ghz_tdr_40ns_042025_5 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0507_am.rv_scs_resetctn1ghz_tdr_40ns_042025_5.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0507_am.rv_scs_resetctn1ghz_tdr_40ns_042025_5.rv_scs_resetctn1ghz_tdr_40ns_042025_5_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_ss_resetClkDef_tdr_40ns_042525_7 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0507_am.rv_ss_resetClkDef_tdr_40ns_042525_7.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0507_am.rv_ss_resetClkDef_tdr_40ns_042525_7.rv_ss_resetClkDef_tdr_40ns_042525_7_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite PCS1_PHY2_pcie_intlpbk_ber_lane1_gen_5_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0507_am.PCS1_PHY2_pcie_intlpbk_ber_lane1_gen_5_050625_2.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0507_am.PCS1_PHY2_pcie_intlpbk_ber_lane1_gen_5_050625_2.PCS1_PHY2_pcie_intlpbk_ber_lane1_gen_5_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+	}
+	execute {
+		rv_top_pad_reset_40ns_042325_7.execute();
+
+		rv_top_volatilerawunlock_40ns_041625_3.execute();
+
+		rv_scs_resetctn1ghz_tdr_40ns_042025_5.execute();
+
+		rv_ss_resetClkDef_tdr_40ns_042525_7.execute();
+
+		PCS1_PHY2_pcie_intlpbk_ber_lane1_gen_5_NV.execute();
+
+	}
+}

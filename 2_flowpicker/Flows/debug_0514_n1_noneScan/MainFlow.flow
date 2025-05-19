@@ -1,0 +1,30 @@
+flow MainFlow {
+	setup{
+		flow GF_lui_128KB_ofst0KB_core0_NV calls Flows.debug_0514_n1_noneScan.GF_lui_128KB_ofst0KB_core0_NV{}
+		flow GF_lui_4KB_ofst0KB_core0_NV calls Flows.debug_0514_n1_noneScan.GF_lui_4KB_ofst0KB_core0_NV{}
+		flow GF_lui_4KB_ofst1KB_core0_NV calls Flows.debug_0514_n1_noneScan.GF_lui_4KB_ofst1KB_core0_NV{}
+		flow GF_lui_64KB_ofst0KB_core0_NV calls Flows.debug_0514_n1_noneScan.GF_lui_64KB_ofst0KB_core0_NV{}
+		flow GF_lui_64KB_ofst256B_core0_NV calls Flows.debug_0514_n1_noneScan.GF_lui_64KB_ofst256B_core0_NV{}
+		flow GF_return_from_main_NV calls Flows.debug_0514_n1_noneScan.GF_return_from_main_NV{}
+		flow GF_rv_hms0_ilbio_dwrd_NV calls Flows.debug_0514_n1_noneScan.GF_rv_hms0_ilbio_dwrd_NV{}
+		flow GF_rv_hms0_ilbio_generic_NV calls Flows.debug_0514_n1_noneScan.GF_rv_hms0_ilbio_generic_NV{}
+		flow GF_rv_hms1_ilbio_generic_NV calls Flows.debug_0514_n1_noneScan.GF_rv_hms1_ilbio_generic_NV{}
+		flow GF_rv_hms1_ilbio_dwrd_NV calls Flows.debug_0514_n1_noneScan.GF_rv_hms1_ilbio_dwrd_NV{}
+		flow GF_rv_hms1_ilbio_init_SPM_NV calls Flows.debug_0514_n1_noneScan.GF_rv_hms1_ilbio_init_SPM_NV{}
+		flow GF_rv_hms0_ilbio_init_SPM_NV calls Flows.debug_0514_n1_noneScan.GF_rv_hms0_ilbio_init_SPM_NV{}
+	}
+	execute {
+		GF_lui_128KB_ofst0KB_core0_NV.execute();
+		GF_lui_4KB_ofst0KB_core0_NV.execute();
+		GF_lui_4KB_ofst1KB_core0_NV.execute();
+		GF_lui_64KB_ofst0KB_core0_NV.execute();
+		GF_lui_64KB_ofst256B_core0_NV.execute();
+		GF_return_from_main_NV.execute();
+		GF_rv_hms0_ilbio_dwrd_NV.execute();
+		GF_rv_hms0_ilbio_generic_NV.execute();
+		GF_rv_hms1_ilbio_generic_NV.execute();
+		GF_rv_hms1_ilbio_dwrd_NV.execute();
+		GF_rv_hms1_ilbio_init_SPM_NV.execute();
+		GF_rv_hms0_ilbio_init_SPM_NV.execute();
+	}
+}

@@ -1,0 +1,46 @@
+flow MainFlow {
+    setup{
+//		flow GF_rcc_core0_ifd_m0_mbist_4N_ECOFIX_NOP_NV calls Flows.debug_0513_n1_noneScan.GF_rcc_core0_ifd_m0_mbist_4N_ECOFIX_NOP_NV{}
+//		flow GF_rcc_core0_ifd_m0_sone_4N_ECOFIX_NOP_NV calls Flows.debug_0513_n1_noneScan.GF_rcc_core0_ifd_m0_sone_4N_ECOFIX_NOP_NV{}
+//		flow GF_rv_dms0_DmcClk1520Mhz_6080_1to2_NV calls Flows.debug_0513_n1_noneScan.GF_rv_dms0_DmcClk1520Mhz_6080_1to2_NV{}
+//		flow GF_rv_dms1_DmcClk1520Mhz_6080_1to2_NV calls Flows.debug_0513_n1_noneScan.GF_rv_dms1_DmcClk1520Mhz_6080_1to2_NV{}
+//		flow GF_rv_dms2_DmcClk1520Mhz_6080_1to2_NV calls Flows.debug_0513_n1_noneScan.GF_rv_dms2_DmcClk1520Mhz_6080_1to2_NV{}
+//		flow GF_rv_dms0_DmcClk1050Mhz_8400_1to4_NV calls Flows.debug_0513_n1_noneScan.GF_rv_dms0_DmcClk1050Mhz_8400_1to4_NV{}
+//		flow GF_rv_dms1_DmcClk1050Mhz_8400_1to4_NV calls Flows.debug_0513_n1_noneScan.GF_rv_dms1_DmcClk1050Mhz_8400_1to4_NV{}
+//		flow GF_rv_dms2_DmcClk1050Mhz_8400_1to4_NV calls Flows.debug_0513_n1_noneScan.GF_rv_dms2_DmcClk1050Mhz_8400_1to4_NV{}
+//		flow GF_rv_dms0_DmcClk900Mhz_7200_1to4_NV calls Flows.debug_0513_n1_noneScan.GF_rv_dms0_DmcClk900Mhz_7200_1to4_NV{}
+//		flow GF_rv_dms1_DmcClk900Mhz_7200_1to4_NV calls Flows.debug_0513_n1_noneScan.GF_rv_dms1_DmcClk900Mhz_7200_1to4_NV{}
+//		flow GF_rv_dms2_DmcClk900Mhz_7200_1to4_NV calls Flows.debug_0513_n1_noneScan.GF_rv_dms2_DmcClk900Mhz_7200_1to4_NV{}
+//		flow GF_rv_dms0_DmcClk800Mhz_6400_1to4_NV calls Flows.debug_0513_n1_noneScan.GF_rv_dms0_DmcClk800Mhz_6400_1to4_NV{}
+//		flow GF_rv_dms1_DmcClk800Mhz_6400_1to4_NV calls Flows.debug_0513_n1_noneScan.GF_rv_dms1_DmcClk800Mhz_6400_1to4_NV{}
+//		flow GF_rv_dms2_DmcClk800Mhz_6400_1to4_NV calls Flows.debug_0513_n1_noneScan.GF_rv_dms2_DmcClk800Mhz_6400_1to4_NV{}
+        flow GF_return_from_main_NV calls Flows.debug_0513_n1_noneScan.GF_return_from_main_NV{}
+//		flow GF_peakpower_vecmax_vfadd_core0_NV calls Flows.debug_0513_n1_noneScan.GF_peakpower_vecmax_vfadd_core0_NV{}
+//		flow GF_l2_miss_1p_core0_NV calls Flows.debug_0513_n1_noneScan.GF_l2_miss_1p_core0_NV{}
+        flow GF_lui_4KB_ofst0KB_core0_NV calls Flows.debug_0513_n1_noneScan.GF_lui_4KB_ofst0KB_core0_NV{}
+        flow GF_lui_4KB_ofst1KB_core0_NV calls Flows.debug_0513_n1_noneScan.GF_lui_4KB_ofst1KB_core0_NV{}
+//		flow GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV calls Flows.debug_0513_n1_noneScan.GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV{}
+    }
+    execute {
+//		GF_rcc_core0_ifd_m0_mbist_4N_ECOFIX_NOP_NV.execute();
+//		GF_rcc_core0_ifd_m0_sone_4N_ECOFIX_NOP_NV.execute();
+//		GF_rv_dms0_DmcClk1520Mhz_6080_1to2_NV.execute();
+//		GF_rv_dms1_DmcClk1520Mhz_6080_1to2_NV.execute();
+//		GF_rv_dms2_DmcClk1520Mhz_6080_1to2_NV.execute();
+//		GF_rv_dms0_DmcClk1050Mhz_8400_1to4_NV.execute();
+//		GF_rv_dms1_DmcClk1050Mhz_8400_1to4_NV.execute();
+//		GF_rv_dms2_DmcClk1050Mhz_8400_1to4_NV.execute();
+//		GF_rv_dms0_DmcClk900Mhz_7200_1to4_NV.execute();
+//		GF_rv_dms1_DmcClk900Mhz_7200_1to4_NV.execute();
+//		GF_rv_dms2_DmcClk900Mhz_7200_1to4_NV.execute();
+//		GF_rv_dms0_DmcClk800Mhz_6400_1to4_NV.execute();
+//		GF_rv_dms1_DmcClk800Mhz_6400_1to4_NV.execute();
+//		GF_rv_dms2_DmcClk800Mhz_6400_1to4_NV.execute();
+        GF_return_from_main_NV.execute();
+//		GF_peakpower_vecmax_vfadd_core0_NV.execute();
+//		GF_l2_miss_1p_core0_NV.execute();
+        GF_lui_4KB_ofst0KB_core0_NV.execute();
+        GF_lui_4KB_ofst1KB_core0_NV.execute();
+//		GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV.execute();
+    }
+}

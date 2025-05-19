@@ -1,0 +1,118 @@
+flow Contact_Test {
+    in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+    setup {
+        suite relay_on_k10 calls misc.UtilityAction{
+            UtilityPins_to_On =  "K10";
+        }
+
+        suite Disconnect calls misc.Disconnect{
+            disconnectPins = "G_ALL_POWER" ;
+            group =  "configuration.IO_Group";
+
+        }
+
+        suite OS_PMU calls Continuity.OPEN_SHORT_v3{
+            levelSpec = setupRef(Levels.PS.OS_specValue);
+            signals         = "G_OS";
+            forceCurrent    = -2E-4;
+            vClampLow       = -1.5;
+            vClampHigh      = 3.0;
+            isMeasParallel  = true;
+        }
+
+        suite OpenShort calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.OpenShort.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.OpenShort.OpenShort_Sseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+
+        suite Kelvin_CHeck calls Continuity.CheckKelvinConnection{
+            group = setupRef(configuration.IO_Group);         //mandatory parameter
+            signals = "G_ALL_POWER";                          //mandatory parameter
+        }
+
+        suite PowerShort calls Continuity.POWER_SHORT_v3{
+            levelSpec = setupRef(Levels.PS.OS_specValue);
+            signals         = "G_ALL_POWER_SMALL";
+            forceVoltage    = 0.05;
+            waitBeforeMeas  = 150e-3;
+            samples         = 16;       // Optional
+            iClamp          = 100E-3;
+            iRange          = 100E-3;
+            isMeasParallel  = false;
+        }
+
+        suite PowerShort_VDD_GSOC calls Continuity.POWER_SHORT_v3{
+            levelSpec = setupRef(Levels.PS.OS_specValue);
+            signals         = "VDD_GSOC";
+            forceVoltage    = 0.01;
+            waitBeforeMeas  = 350e-3;
+            samples         = 16;       // Optional
+            iClamp          = 300E-3;
+            iRange          = 300E-3;
+            isMeasParallel  = false;
+        }
+        suite PowerShort_VDD_CPU calls Continuity.POWER_SHORT_v3{
+            levelSpec = setupRef(Levels.PS.OS_specValue);
+            signals         = "VDD_CPU";
+            forceVoltage    = 0.05;
+            waitBeforeMeas  = 350e-3;
+            samples         = 16;       // Optional
+            iClamp          = 100E-3;
+            iRange          = 100E-3;
+            isMeasParallel  = false;
+        }
+        suite DisconnectCopy calls misc.Disconnect{
+            disconnectPins = "G_ALL_POWER" ;
+            group =  "configuration.IO_Group";
+        }
+
+    }
+    execute {
+        DisconnectCopy.execute();
+        relay_on_k10.execute();
+        Kelvin_CHeck.execute();
+         if( Kelvin_CHeck.pass){
+        }else{
+            stop();
+        }
+
+        Disconnect.execute();
+
+
+        OpenShort.execute();
+        if( OpenShort.pass){
+        }else{
+            stop();
+        }
+
+        OS_PMU.execute();
+        if( OS_PMU.pass){
+        }else{
+            stop();
+        }
+
+
+        PowerShort.execute();
+        if( PowerShort.pass){
+        }else{
+            stop();
+        }
+
+        PowerShort_VDD_CPU.execute();
+        if( PowerShort_VDD_CPU.pass){
+        }else{
+            stop();
+        }
+
+        PowerShort_VDD_GSOC.execute();
+        if( PowerShort_VDD_GSOC.pass){
+        }else{
+            stop();
+        }
+        Disconnect.execute();
+    }
+}

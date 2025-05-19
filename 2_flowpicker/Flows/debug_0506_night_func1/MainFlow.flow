@@ -1,0 +1,18 @@
+flow MainFlow {
+	setup{
+		flow GF_bootrom_base_rom_base_rom_epmp_state_init_NV calls Flows.debug_0506_night_func1.GF_bootrom_base_rom_base_rom_epmp_state_init_NV{}
+		flow GF_bootrom_second_rom_main_fatal_NV calls Flows.debug_0506_night_func1.GF_bootrom_second_rom_main_fatal_NV{}
+		flow GF_bootrom_base_rom_second_rom_boot_NV calls Flows.debug_0506_night_func1.GF_bootrom_base_rom_second_rom_boot_NV{}
+		flow GF_bootrom_base_rom_shutdown_init_NV calls Flows.debug_0506_night_func1.GF_bootrom_base_rom_shutdown_init_NV{}
+		flow GF_bootrom_base_rom_epmp_state_check_NV calls Flows.debug_0506_night_func1.GF_bootrom_base_rom_epmp_state_check_NV{}
+		flow GF_rom_read_NV calls Flows.debug_0506_night_func1.GF_rom_read_NV{}
+	}
+	execute {
+		GF_bootrom_base_rom_base_rom_epmp_state_init_NV.execute();
+		GF_bootrom_second_rom_main_fatal_NV.execute();
+		GF_bootrom_base_rom_second_rom_boot_NV.execute();
+		GF_bootrom_base_rom_shutdown_init_NV.execute();
+		GF_bootrom_base_rom_epmp_state_check_NV.execute();
+		GF_rom_read_NV.execute();
+	}
+}

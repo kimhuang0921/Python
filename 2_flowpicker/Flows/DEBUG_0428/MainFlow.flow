@@ -1,0 +1,64 @@
+flow MainFlow {
+	setup{
+		flow GF_rvgdie_dms0sch0_ssn_continuity_pl_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_dms0sch0_ssn_continuity_pl_dbg_NV{}
+		flow GF_rvgdie_dms0sch0_ssn_loopback_pl_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_dms0sch0_ssn_loopback_pl_dbg_NV{}
+		flow GF_rvgdie_pwcmio_ssn_continuity_pl_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_pwcmio_ssn_continuity_pl_dbg_NV{}
+		flow GF_rvgdie_pwcmio_ssn_loopback_pl_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_pwcmio_ssn_loopback_pl_dbg_NV{}
+		flow GF_rvgdie_dms0sch0_int_sa_chain_edt_allsetup_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_dms0sch0_int_sa_chain_edt_allsetup_dbg_NV{}
+		flow GF_rvgdie_dms0sch0_int_sa_chain_edt_pl_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_dms0sch0_int_sa_chain_edt_pl_dbg_NV{}
+		flow GF_rvgdie_dms0sch0_int_sa_edt_ts_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_dms0sch0_int_sa_edt_ts_dbg_NV{}
+		flow GF_rvgdie_dms0sch0_int_sa_scan_edt_pl_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_dms0sch0_int_sa_scan_edt_pl_dbg_NV{}
+		flow GF_rvgdie_dms0sch0_ssn_continuity_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_dms0sch0_ssn_continuity_dbg_NV{}
+		flow GF_rvgdie_dms0sch0_ssn_loopback_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_dms0sch0_ssn_loopback_dbg_NV{}
+		flow GF_rvgdie_pwcmio_int_sa_chain_edt_allsetup_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_pwcmio_int_sa_chain_edt_allsetup_dbg_NV{}
+		flow GF_rvgdie_pwcmio_int_sa_chain_edt_pl_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_pwcmio_int_sa_chain_edt_pl_dbg_NV{}
+		flow GF_rvgdie_pwcmio_int_sa_edt_ts_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_pwcmio_int_sa_edt_ts_dbg_NV{}
+		flow GF_rvgdie_pwcmio_ssn_continuity_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_pwcmio_ssn_continuity_dbg_NV{}
+		flow GF_rvgdie_pwcmio_ssn_loopback_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_pwcmio_ssn_loopback_dbg_NV{}
+		flow GF_rvgdie_pwcmio_int_sa_scan_edt_pl_dbg_NV calls Flows.DEBUG_0428.GF_rvgdie_pwcmio_int_sa_scan_edt_pl_dbg_NV{}
+		flow GF_rv_ss_emaconfig_template_NV calls Flows.DEBUG_0428.GF_rv_ss_emaconfig_template_NV{}
+		flow GF_rcc_core0_ifd_m0_1W5R_NV calls Flows.DEBUG_0428.GF_rcc_core0_ifd_m0_1W5R_NV{}
+		flow GF_rcc_core0_ifd_m0_4N_NV calls Flows.DEBUG_0428.GF_rcc_core0_ifd_m0_4N_NV{}
+		flow GF_rcc_core0_ifd_m0_4N_sone_50_NV calls Flows.DEBUG_0428.GF_rcc_core0_ifd_m0_4N_sone_50_NV{}
+		flow GF_rcc_core0_ifd_m0_5W05R0_sone_50_NV calls Flows.DEBUG_0428.GF_rcc_core0_ifd_m0_5W05R0_sone_50_NV{}
+		flow GF_rcc_core0_ifd_m0_5W15R1_sone_50_NV calls Flows.DEBUG_0428.GF_rcc_core0_ifd_m0_5W15R1_sone_50_NV{}
+		flow GF_rcc_core0_ifd_m0_sone_50_NV calls Flows.DEBUG_0428.GF_rcc_core0_ifd_m0_sone_50_NV{}
+		flow GF_rcc_lsd_l1d_NegTest_NV calls Flows.DEBUG_0428.GF_rcc_lsd_l1d_NegTest_NV{}
+		flow GF_rcc_core0_ifd_m0_1W5R_sone_50_NV calls Flows.DEBUG_0428.GF_rcc_core0_ifd_m0_1W5R_sone_50_NV{}
+		flow GF_rv_ccs_CoreClkFnom_tdr_40ns_NV calls Flows.DEBUG_0428.GF_rv_ccs_CoreClkFnom_tdr_40ns_NV{}
+		flow GF_rv_ccs_CoreClkFmin_tdr_40ns_NV calls Flows.DEBUG_0428.GF_rv_ccs_CoreClkFmin_tdr_40ns_NV{}
+		flow GF_rv_ccs_tcu_l1d_ClockBypass_40ns_NV calls Flows.DEBUG_0428.GF_rv_ccs_tcu_l1d_ClockBypass_40ns_NV{}
+		flow GF_rv_ccs_CoreClkFmax_tdr_40ns_NV calls Flows.DEBUG_0428.GF_rv_ccs_CoreClkFmax_tdr_40ns_NV{}
+	}
+	execute {
+		GF_rvgdie_dms0sch0_ssn_continuity_pl_dbg_NV.execute();
+		GF_rvgdie_dms0sch0_ssn_loopback_pl_dbg_NV.execute();
+		GF_rvgdie_pwcmio_ssn_continuity_pl_dbg_NV.execute();
+		GF_rvgdie_pwcmio_ssn_loopback_pl_dbg_NV.execute();
+		GF_rvgdie_dms0sch0_int_sa_chain_edt_allsetup_dbg_NV.execute();
+		GF_rvgdie_dms0sch0_int_sa_chain_edt_pl_dbg_NV.execute();
+		GF_rvgdie_dms0sch0_int_sa_edt_ts_dbg_NV.execute();
+		GF_rvgdie_dms0sch0_int_sa_scan_edt_pl_dbg_NV.execute();
+		GF_rvgdie_dms0sch0_ssn_continuity_dbg_NV.execute();
+		GF_rvgdie_dms0sch0_ssn_loopback_dbg_NV.execute();
+		GF_rvgdie_pwcmio_int_sa_chain_edt_allsetup_dbg_NV.execute();
+		GF_rvgdie_pwcmio_int_sa_chain_edt_pl_dbg_NV.execute();
+		GF_rvgdie_pwcmio_int_sa_edt_ts_dbg_NV.execute();
+		GF_rvgdie_pwcmio_ssn_continuity_dbg_NV.execute();
+		GF_rvgdie_pwcmio_ssn_loopback_dbg_NV.execute();
+		GF_rvgdie_pwcmio_int_sa_scan_edt_pl_dbg_NV.execute();
+		GF_rv_ss_emaconfig_template_NV.execute();
+		GF_rcc_core0_ifd_m0_1W5R_NV.execute();
+		GF_rcc_core0_ifd_m0_4N_NV.execute();
+		GF_rcc_core0_ifd_m0_4N_sone_50_NV.execute();
+		GF_rcc_core0_ifd_m0_5W05R0_sone_50_NV.execute();
+		GF_rcc_core0_ifd_m0_5W15R1_sone_50_NV.execute();
+		GF_rcc_core0_ifd_m0_sone_50_NV.execute();
+		GF_rcc_lsd_l1d_NegTest_NV.execute();
+		GF_rcc_core0_ifd_m0_1W5R_sone_50_NV.execute();
+		GF_rv_ccs_CoreClkFnom_tdr_40ns_NV.execute();
+		GF_rv_ccs_CoreClkFmin_tdr_40ns_NV.execute();
+		GF_rv_ccs_tcu_l1d_ClockBypass_40ns_NV.execute();
+		GF_rv_ccs_CoreClkFmax_tdr_40ns_NV.execute();
+	}
+}

@@ -1,0 +1,28 @@
+flow MainFlow {
+	setup{
+		flow GF_PCS0_PHY0_pllbist_gen1_2_basic_NV calls Flows.debug_0516_m1_noneScan.GF_PCS0_PHY0_pllbist_gen1_2_basic_NV{}
+		flow GF_PCS0_PHY0_pllbist_gen1_2_debug_widle_NV calls Flows.debug_0516_m1_noneScan.GF_PCS0_PHY0_pllbist_gen1_2_debug_widle_NV{}
+		flow GF_load_pwc_NV calls Flows.debug_0516_m1_noneScan.GF_load_pwc_NV{}
+		flow GF_PCS0_PHY0_pllbist_gen1_2_debug_idx_all_NV calls Flows.debug_0516_m1_noneScan.GF_PCS0_PHY0_pllbist_gen1_2_debug_idx_all_NV{}
+		flow GF_PCS0_PHY0_pllbist_gen1_2_debug_idx_end_NV calls Flows.debug_0516_m1_noneScan.GF_PCS0_PHY0_pllbist_gen1_2_debug_idx_end_NV{}
+		flow GF_PCS0_PHY0_pllbist_gen1_2_debug_idx_mid_NV calls Flows.debug_0516_m1_noneScan.GF_PCS0_PHY0_pllbist_gen1_2_debug_idx_mid_NV{}
+		flow GF_PCS0_PHY0_pllbist_gen1_2_debug_idx_pre_NV calls Flows.debug_0516_m1_noneScan.GF_PCS0_PHY0_pllbist_gen1_2_debug_idx_pre_NV{}
+		flow GF_rv_phy_pcs0_fw_load_patch_4_ahb_mex_NV calls Flows.debug_0516_m1_noneScan.GF_rv_phy_pcs0_fw_load_patch_4_ahb_mex_NV{}
+		flow GF_rv_phy_pcs0_fw_load_patch_4_apb_mex_NV calls Flows.debug_0516_m1_noneScan.GF_rv_phy_pcs0_fw_load_patch_4_apb_mex_NV{}
+		flow GF_rv_phy_pcs0_fw_load_patch4_sanity_NV calls Flows.debug_0516_m1_noneScan.GF_rv_phy_pcs0_fw_load_patch4_sanity_NV{}
+		flow GF_rv_phy_pcs0_fw_load_sanity_NV calls Flows.debug_0516_m1_noneScan.GF_rv_phy_pcs0_fw_load_sanity_NV{}
+	}
+	execute {
+		GF_PCS0_PHY0_pllbist_gen1_2_basic_NV.execute();
+		GF_PCS0_PHY0_pllbist_gen1_2_debug_widle_NV.execute();
+		GF_load_pwc_NV.execute();
+		GF_PCS0_PHY0_pllbist_gen1_2_debug_idx_all_NV.execute();
+		GF_PCS0_PHY0_pllbist_gen1_2_debug_idx_end_NV.execute();
+		GF_PCS0_PHY0_pllbist_gen1_2_debug_idx_mid_NV.execute();
+		GF_PCS0_PHY0_pllbist_gen1_2_debug_idx_pre_NV.execute();
+		GF_rv_phy_pcs0_fw_load_patch_4_ahb_mex_NV.execute();
+		GF_rv_phy_pcs0_fw_load_patch_4_apb_mex_NV.execute();
+		GF_rv_phy_pcs0_fw_load_patch4_sanity_NV.execute();
+		GF_rv_phy_pcs0_fw_load_sanity_NV.execute();
+	}
+}

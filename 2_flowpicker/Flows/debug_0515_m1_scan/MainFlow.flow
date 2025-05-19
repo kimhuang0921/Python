@@ -1,0 +1,36 @@
+flow MainFlow {
+	setup{
+		flow GF_rvf_ftr_int_sa_chain_edt_pl_NV calls Flows.debug_0515_m1_scan.GF_rvf_ftr_int_sa_chain_edt_pl_NV{}
+		flow GF_rvf_ftr_int_sa_scan_edt_pl_NV calls Flows.debug_0515_m1_scan.GF_rvf_ftr_int_sa_scan_edt_pl_NV{}
+		flow GF_rvf_ftr_ssn_loopback_NV calls Flows.debug_0515_m1_scan.GF_rvf_ftr_ssn_loopback_NV{}
+		flow GF_rv_rcc_rcc_pmd_ssn_loopback_2_NV calls Flows.debug_0515_m1_scan.GF_rv_rcc_rcc_pmd_ssn_loopback_2_NV{}
+		flow GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_2_NV calls Flows.debug_0515_m1_scan.GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_2_NV{}
+		flow GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_2_NV calls Flows.debug_0515_m1_scan.GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_2_NV{}
+		flow GF_rv_rcc_rcc_pmd_ssn_loopback_NV calls Flows.debug_0515_m1_scan.GF_rv_rcc_rcc_pmd_ssn_loopback_NV{}
+		flow GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_NV calls Flows.debug_0515_m1_scan.GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_NV{}
+		flow GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_NV calls Flows.debug_0515_m1_scan.GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_NV{}
+		flow GF_rv_rcc_rvf_ldu_top_ssn_loopback_NV calls Flows.debug_0515_m1_scan.GF_rv_rcc_rvf_ldu_top_ssn_loopback_NV{}
+		flow GF_rv_rcc_rvf_ldu_top_int_sa_chain_edt_pl_NV calls Flows.debug_0515_m1_scan.GF_rv_rcc_rvf_ldu_top_int_sa_chain_edt_pl_NV{}
+		flow GF_rv_rcc_rvf_ldu_top_int_sa_scan_edt_pl_NV calls Flows.debug_0515_m1_scan.GF_rv_rcc_rvf_ldu_top_int_sa_scan_edt_pl_NV{}
+		flow GF_rv_rcc_rcc_core0_ssn_loopback_NV calls Flows.debug_0515_m1_scan.GF_rv_rcc_rcc_core0_ssn_loopback_NV{}
+		flow GF_rv_rcc_rcc_core0_int_sa_chain_edt_pl_NV calls Flows.debug_0515_m1_scan.GF_rv_rcc_rcc_core0_int_sa_chain_edt_pl_NV{}
+		flow GF_rv_rcc_rcc_core0_int_sa_scan_edt_pl_NV calls Flows.debug_0515_m1_scan.GF_rv_rcc_rcc_core0_int_sa_scan_edt_pl_NV{}
+	}
+	execute {
+		GF_rvf_ftr_int_sa_chain_edt_pl_NV.execute();
+		GF_rvf_ftr_int_sa_scan_edt_pl_NV.execute();
+		GF_rvf_ftr_ssn_loopback_NV.execute();
+		GF_rv_rcc_rcc_pmd_ssn_loopback_2_NV.execute();
+		GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_2_NV.execute();
+		GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_2_NV.execute();
+		GF_rv_rcc_rcc_pmd_ssn_loopback_NV.execute();
+		GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_NV.execute();
+		GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_NV.execute();
+		GF_rv_rcc_rvf_ldu_top_ssn_loopback_NV.execute();
+		GF_rv_rcc_rvf_ldu_top_int_sa_chain_edt_pl_NV.execute();
+		GF_rv_rcc_rvf_ldu_top_int_sa_scan_edt_pl_NV.execute();
+		GF_rv_rcc_rcc_core0_ssn_loopback_NV.execute();
+		GF_rv_rcc_rcc_core0_int_sa_chain_edt_pl_NV.execute();
+		GF_rv_rcc_rcc_core0_int_sa_scan_edt_pl_NV.execute();
+	}
+}

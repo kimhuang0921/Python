@@ -1,0 +1,78 @@
+flow MainFlow {
+    setup{
+        flow GF_matmul_NV calls Flows.debug_0506_noneScan.GF_matmul_NV{}
+        flow GF_bootrom_rom_patch_NV calls Flows.debug_0506_noneScan.GF_bootrom_rom_patch_NV{}
+        flow GF_bootrom_rom_patch_v2_NV calls Flows.debug_0506_noneScan.GF_bootrom_rom_patch_v2_NV{}
+        flow GF_bootrom_pwc_boot_NV calls Flows.debug_0506_noneScan.GF_bootrom_pwc_boot_NV{}
+        flow GF_d2d_apb_rd_pll_sts2_NV calls Flows.debug_0506_noneScan.GF_d2d_apb_rd_pll_sts2_NV{}
+        flow GF_rv_phy_d2dns_config_ctn_40ns_NV calls Flows.debug_0506_noneScan.GF_rv_phy_d2dns_config_ctn_40ns_NV{}
+        flow GF_rv_phy_d2dns_config_ctn_read_band_40ns_NV calls Flows.debug_0506_noneScan.GF_rv_phy_d2dns_config_ctn_read_band_40ns_NV{}
+        flow GF_rva_llch_grid_east_MC8_mbist_n26_NV calls Flows.debug_0506_noneScan.GF_rva_llch_grid_east_MC8_mbist_n26_NV{}
+        flow GF_rva_llch_grid_channel_east_wrapper_mbist_n26_NV calls Flows.debug_0506_noneScan.GF_rva_llch_grid_channel_east_wrapper_mbist_n26_NV{}
+        flow GF_rva_llch_grid_channel_east_wrapper_mbist_n26_rm011_NV calls Flows.debug_0506_noneScan.GF_rva_llch_grid_channel_east_wrapper_mbist_n26_rm011_NV{}
+        flow GF_rva_llch_grid_channel_east_wrapper_mbist_n26_rm101_NV calls Flows.debug_0506_noneScan.GF_rva_llch_grid_channel_east_wrapper_mbist_n26_rm101_NV{}
+        flow GF_rva_llch_grid_channel_east_wrapper_mbist_n26_test1_NV calls Flows.debug_0506_noneScan.GF_rva_llch_grid_channel_east_wrapper_mbist_n26_test1_NV{}
+        flow GF_fgw_0_mbist_4N_NV calls Flows.debug_0506_noneScan.GF_fgw_0_mbist_4N_NV{}
+        flow GF_fgw_0_mbist_fgwd_NV calls Flows.debug_0506_noneScan.GF_fgw_0_mbist_fgwd_NV{}
+        flow GF_fgw_0_sone_N26_NV calls Flows.debug_0506_noneScan.GF_fgw_0_sone_N26_NV{}
+        flow GF_llch_east_proc2_2_sone_N26_NV calls Flows.debug_0506_noneScan.GF_llch_east_proc2_2_sone_N26_NV{}
+        flow GF_llch_east_proc2_6_sone_N26_NV calls Flows.debug_0506_noneScan.GF_llch_east_proc2_6_sone_N26_NV{}
+        flow GF_llch_east_proc2_10_sone_N26_NV calls Flows.debug_0506_noneScan.GF_llch_east_proc2_10_sone_N26_NV{}
+        flow GF_llch_east_proc2_58_sone_N26_NV calls Flows.debug_0506_noneScan.GF_llch_east_proc2_58_sone_N26_NV{}
+        flow GF_llch_east_proc2_62_sone_N26_NV calls Flows.debug_0506_noneScan.GF_llch_east_proc2_62_sone_N26_NV{}
+        /*flow GF_PCS0_PHY0_pllbist_pcie_gen1_2_NV calls Flows.debug_0506_noneScan.GF_PCS0_PHY0_pllbist_pcie_gen1_2_NV{}
+        flow GF_PCS0_PHY0_pllbist_pcie_gen3_plus_NV calls Flows.debug_0506_noneScan.GF_PCS0_PHY0_pllbist_pcie_gen3_plus_NV{}
+        flow GF_PCS0_PHY1_pllbist_pcie_gen1_2_NV calls Flows.debug_0506_noneScan.GF_PCS0_PHY1_pllbist_pcie_gen1_2_NV{}
+        flow GF_PCS0_PHY1_pllbist_pcie_gen3_plus_NV calls Flows.debug_0506_noneScan.GF_PCS0_PHY1_pllbist_pcie_gen3_plus_NV{}
+        flow GF_PCS0_PHY2_pllbist_pcie_gen1_2_NV calls Flows.debug_0506_noneScan.GF_PCS0_PHY2_pllbist_pcie_gen1_2_NV{}
+        flow GF_PCS0_PHY2_pllbist_pcie_gen3_plus_NV calls Flows.debug_0506_noneScan.GF_PCS0_PHY2_pllbist_pcie_gen3_plus_NV{}
+        flow GF_PCS0_PHY3_pllbist_pcie_gen1_2_NV calls Flows.debug_0506_noneScan.GF_PCS0_PHY3_pllbist_pcie_gen1_2_NV{}
+        flow GF_PCS0_PHY3_pllbist_pcie_gen3_plus_NV calls Flows.debug_0506_noneScan.GF_PCS0_PHY3_pllbist_pcie_gen3_plus_NV{}
+        flow GF_PCS1_PHY0_pllbist_pcie_gen1_2_NV calls Flows.debug_0506_noneScan.GF_PCS1_PHY0_pllbist_pcie_gen1_2_NV{}
+        flow GF_PCS1_PHY0_pllbist_pcie_gen3_plus_NV calls Flows.debug_0506_noneScan.GF_PCS1_PHY0_pllbist_pcie_gen3_plus_NV{}
+        flow GF_PCS1_PHY1_pllbist_pcie_gen1_2_NV calls Flows.debug_0506_noneScan.GF_PCS1_PHY1_pllbist_pcie_gen1_2_NV{}
+        flow GF_PCS1_PHY1_pllbist_pcie_gen3_plus_NV calls Flows.debug_0506_noneScan.GF_PCS1_PHY1_pllbist_pcie_gen3_plus_NV{}
+        flow GF_PCS1_PHY2_pllbist_pcie_gen1_2_NV calls Flows.debug_0506_noneScan.GF_PCS1_PHY2_pllbist_pcie_gen1_2_NV{}
+        flow GF_PCS1_PHY2_pllbist_pcie_gen3_plus_NV calls Flows.debug_0506_noneScan.GF_PCS1_PHY2_pllbist_pcie_gen3_plus_NV{}
+        flow GF_PCS1_PHY3_pllbist_pcie_gen1_2_NV calls Flows.debug_0506_noneScan.GF_PCS1_PHY3_pllbist_pcie_gen1_2_NV{}
+        flow GF_PCS1_PHY3_pllbist_pcie_gen3_plus_NV calls Flows.debug_0506_noneScan.GF_PCS1_PHY3_pllbist_pcie_gen3_plus_NV{}*/
+    }
+    execute {
+        GF_matmul_NV.execute();
+        GF_bootrom_rom_patch_NV.execute();
+        GF_bootrom_rom_patch_v2_NV.execute();
+        GF_bootrom_pwc_boot_NV.execute();
+        GF_d2d_apb_rd_pll_sts2_NV.execute();
+        GF_rv_phy_d2dns_config_ctn_40ns_NV.execute();
+        GF_rv_phy_d2dns_config_ctn_read_band_40ns_NV.execute();
+        GF_rva_llch_grid_east_MC8_mbist_n26_NV.execute();
+        GF_rva_llch_grid_channel_east_wrapper_mbist_n26_NV.execute();
+        GF_rva_llch_grid_channel_east_wrapper_mbist_n26_rm011_NV.execute();
+        GF_rva_llch_grid_channel_east_wrapper_mbist_n26_rm101_NV.execute();
+        GF_rva_llch_grid_channel_east_wrapper_mbist_n26_test1_NV.execute();
+        GF_fgw_0_mbist_4N_NV.execute();
+        GF_fgw_0_mbist_fgwd_NV.execute();
+        GF_fgw_0_sone_N26_NV.execute();
+        GF_llch_east_proc2_2_sone_N26_NV.execute();
+        GF_llch_east_proc2_6_sone_N26_NV.execute();
+        GF_llch_east_proc2_10_sone_N26_NV.execute();
+        GF_llch_east_proc2_58_sone_N26_NV.execute();
+        GF_llch_east_proc2_62_sone_N26_NV.execute();
+        /*GF_PCS0_PHY0_pllbist_pcie_gen1_2_NV.execute();
+        GF_PCS0_PHY0_pllbist_pcie_gen3_plus_NV.execute();
+        GF_PCS0_PHY1_pllbist_pcie_gen1_2_NV.execute();
+        GF_PCS0_PHY1_pllbist_pcie_gen3_plus_NV.execute();
+        GF_PCS0_PHY2_pllbist_pcie_gen1_2_NV.execute();
+        GF_PCS0_PHY2_pllbist_pcie_gen3_plus_NV.execute();
+        GF_PCS0_PHY3_pllbist_pcie_gen1_2_NV.execute();
+        GF_PCS0_PHY3_pllbist_pcie_gen3_plus_NV.execute();
+        GF_PCS1_PHY0_pllbist_pcie_gen1_2_NV.execute();
+        GF_PCS1_PHY0_pllbist_pcie_gen3_plus_NV.execute();
+        GF_PCS1_PHY1_pllbist_pcie_gen1_2_NV.execute();
+        GF_PCS1_PHY1_pllbist_pcie_gen3_plus_NV.execute();
+        GF_PCS1_PHY2_pllbist_pcie_gen1_2_NV.execute();
+        GF_PCS1_PHY2_pllbist_pcie_gen3_plus_NV.execute();
+        GF_PCS1_PHY3_pllbist_pcie_gen1_2_NV.execute();
+        GF_PCS1_PHY3_pllbist_pcie_gen3_plus_NV.execute();*/
+    }
+}

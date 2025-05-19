@@ -1,0 +1,41 @@
+flow GF_rv_phy_d2dns_preamble_ctn_apbdiv8_40ns_NV {
+    in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+    setup {
+
+
+
+
+        suite rv_phy_d2dns_preamble_ctn_apbdiv8_40ns_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0430_noneScan.rv_phy_d2dns_preamble_ctn_apbdiv8_40ns_043025_3.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0430_noneScan.rv_phy_d2dns_preamble_ctn_apbdiv8_40ns_043025_3.rv_phy_d2dns_preamble_ctn_apbdiv8_40ns_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+        }
+        suite rv_phy_d2dns_config_ctn_40ns_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0428_afternoon2.output_rv_phy_d2dns_config_ctn_40ns_042825_3.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0428_afternoon2.output_rv_phy_d2dns_config_ctn_40ns_042825_3.rv_phy_d2dns_config_ctn_40ns_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+        }
+        suite glink_phy0_pll_loss_of_lock_test_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0502_noneScan.glink_phy0_pll_loss_of_lock_test_043025_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0502_noneScan.glink_phy0_pll_loss_of_lock_test_043025_2.glink_phy0_pll_loss_of_lock_test_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+        }
+
+    }
+    execute {
+
+
+
+
+        rv_phy_d2dns_preamble_ctn_apbdiv8_40ns_NV.execute();
+        rv_phy_d2dns_config_ctn_40ns_NV.execute();
+        glink_phy0_pll_loss_of_lock_test_NV.execute();
+
+    }
+}

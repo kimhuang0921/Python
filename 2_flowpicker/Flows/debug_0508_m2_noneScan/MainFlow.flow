@@ -1,0 +1,34 @@
+flow MainFlow {
+	setup{
+		flow GF_load_runtime_NV calls Flows.debug_0508_m2_noneScan.GF_load_runtime_NV{}
+		flow GF_load_full_runtime_NV calls Flows.debug_0508_m2_noneScan.GF_load_full_runtime_NV{}
+		flow GF_load_2pe_runtime_NV calls Flows.debug_0508_m2_noneScan.GF_load_2pe_runtime_NV{}
+		flow GF_all_lram_32K_NV calls Flows.debug_0508_m2_noneScan.GF_all_lram_32K_NV{}
+		flow GF_return_from_main_slow_NV calls Flows.debug_0508_m2_noneScan.GF_return_from_main_slow_NV{}
+		flow GF_dhry_info_slow_NV calls Flows.debug_0508_m2_noneScan.GF_dhry_info_slow_NV{}
+		flow GF_dhry_trap_spin_info_slow_NV calls Flows.debug_0508_m2_noneScan.GF_dhry_trap_spin_info_slow_NV{}
+		flow GF_dhry_step_1000_slow_NV calls Flows.debug_0508_m2_noneScan.GF_dhry_step_1000_slow_NV{}
+		flow GF_rv_Efuse_clksel_NV calls Flows.debug_0508_m2_noneScan.GF_rv_Efuse_clksel_NV{}
+		flow GF_rv_nsEfuse_W_NV calls Flows.debug_0508_m2_noneScan.GF_rv_nsEfuse_W_NV{}
+		flow GF_rv_nsEfuse_R_NV calls Flows.debug_0508_m2_noneScan.GF_rv_nsEfuse_R_NV{}
+		flow GF_bootrom_bootstrap_NV calls Flows.debug_0508_m2_noneScan.GF_bootrom_bootstrap_NV{}
+		flow GF_bootrom_second_rom_rom_patch_NV calls Flows.debug_0508_m2_noneScan.GF_bootrom_second_rom_rom_patch_NV{}
+		flow GF_otp_vendor_test_write_NV calls Flows.debug_0508_m2_noneScan.GF_otp_vendor_test_write_NV{}
+	}
+	execute {
+		GF_load_runtime_NV.execute();
+		GF_load_full_runtime_NV.execute();
+		GF_load_2pe_runtime_NV.execute();
+		GF_all_lram_32K_NV.execute();
+		GF_return_from_main_slow_NV.execute();
+		GF_dhry_info_slow_NV.execute();
+		GF_dhry_trap_spin_info_slow_NV.execute();
+		GF_dhry_step_1000_slow_NV.execute();
+		GF_rv_Efuse_clksel_NV.execute();
+		GF_rv_nsEfuse_W_NV.execute();
+		GF_rv_nsEfuse_R_NV.execute();
+		GF_bootrom_bootstrap_NV.execute();
+		GF_bootrom_second_rom_rom_patch_NV.execute();
+		GF_otp_vendor_test_write_NV.execute();
+	}
+}

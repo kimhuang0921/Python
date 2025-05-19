@@ -1,0 +1,28 @@
+flow GF_llch_east_proc2_6_sone_N26_NV {
+    in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+    setup {
+
+        suite rv_mbist_preamble_0_40ns_042525_8 calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.debug_0506_noneScan.rv_mbist_preamble_0_40ns_042525_8.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.debug_0506_noneScan.rv_mbist_preamble_0_40ns_042525_8.rv_mbist_preamble_0_40ns_042525_8_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+        }
+
+        suite llch_east_proc2_6_sone_N26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.debug_0506_noneScan.llch_east_proc2_6_sone_N26_050525_1.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.debug_0506_noneScan.llch_east_proc2_6_sone_N26_050525_1.llch_east_proc2_6_sone_N26_NV_Pseq);
+            maxFailedCycles=200000;
+            ffvCycles=200000;
+        }
+
+    }
+    execute {
+        rv_mbist_preamble_0_40ns_042525_8.execute();
+
+        llch_east_proc2_6_sone_N26_NV.execute();
+
+    }
+}

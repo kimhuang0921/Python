@@ -1,0 +1,18 @@
+flow n2 {
+    setup{
+        flow GF_rv_scs_resetctn1ghz_tdr_40ns_NV calls Flows.debug_0509_n1_Scan.GF_rv_scs_resetctn1ghz_tdr_40ns_NV{}
+        flow GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV calls Flows.debug_0509_n1_Scan.GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV{}
+        flow GF_load_pwc_NV calls Flows.debug_0509_n1_Scan.GF_load_pwc_NV{}
+        flow GF_rv_dms0_DmcClkFmin_tdr_NV calls Flows.debug_0509_n1_Scan.GF_rv_dms0_DmcClkFmin_tdr_NV{}
+        flow GF_rv_dms1_DmcClkFmin_tdr_NV calls Flows.debug_0509_n1_Scan.GF_rv_dms1_DmcClkFmin_tdr_NV{}
+        flow GF_rv_dms2_DmcClkFmin_tdr_NV calls Flows.debug_0509_n1_Scan.GF_rv_dms2_DmcClkFmin_tdr_NV{}
+    }
+    execute {
+        GF_rv_scs_resetctn1ghz_tdr_40ns_NV.execute();
+        GF_bootrom_second_rom_rom_patch_gpio20_sram_brkp_NV.execute();
+        GF_load_pwc_NV.execute();
+        GF_rv_dms0_DmcClkFmin_tdr_NV.execute();
+        GF_rv_dms1_DmcClkFmin_tdr_NV.execute();
+        GF_rv_dms2_DmcClkFmin_tdr_NV.execute();
+    }
+}

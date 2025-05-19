@@ -1,0 +1,66 @@
+flow MainFlow {
+	setup{
+		flow GF_rv_hms0_ilbio_dwrd_NV calls Flows.debug_0512_n1_noneScan.GF_rv_hms0_ilbio_dwrd_NV{}
+		flow GF_rv_hms0_ilbio_generic_NV calls Flows.debug_0512_n1_noneScan.GF_rv_hms0_ilbio_generic_NV{}
+		flow GF_rv_hms0_init_NV calls Flows.debug_0512_n1_noneScan.GF_rv_hms0_init_NV{}
+		flow GF_rv_hms1_ilbio_dwrd_NV calls Flows.debug_0512_n1_noneScan.GF_rv_hms1_ilbio_dwrd_NV{}
+		flow GF_rv_hms1_ilbio_generic_NV calls Flows.debug_0512_n1_noneScan.GF_rv_hms1_ilbio_generic_NV{}
+		flow GF_rv_hms1_init_NV calls Flows.debug_0512_n1_noneScan.GF_rv_hms1_init_NV{}
+		flow GF_rv_hms1_ilbio_init_SPM_NV calls Flows.debug_0512_n1_noneScan.GF_rv_hms1_ilbio_init_SPM_NV{}
+		flow GF_return_from_main_NV calls Flows.debug_0512_n1_noneScan.GF_return_from_main_NV{}
+		flow GF_peakpower_vecmax_vfadd_core0_NV calls Flows.debug_0512_n1_noneScan.GF_peakpower_vecmax_vfadd_core0_NV{}
+		flow GF_l2_miss_1p_core0_NV calls Flows.debug_0512_n1_noneScan.GF_l2_miss_1p_core0_NV{}
+		flow GF_rv_phy_pcs0_phy0_fw_load_ahb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs0_phy0_fw_load_ahb_NV{}
+		flow GF_rv_phy_pcs0_phy1_fw_load_ahb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs0_phy1_fw_load_ahb_NV{}
+		flow GF_rv_phy_pcs0_phy2_fw_load_ahb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs0_phy2_fw_load_ahb_NV{}
+		flow GF_rv_phy_pcs0_phy3_fw_load_ahb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs0_phy3_fw_load_ahb_NV{}
+		flow GF_rv_phy_pcs1_phy0_fw_load_ahb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs1_phy0_fw_load_ahb_NV{}
+		flow GF_rv_phy_pcs1_phy1_fw_load_ahb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs1_phy1_fw_load_ahb_NV{}
+		flow GF_rv_phy_pcs1_phy2_fw_load_ahb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs1_phy2_fw_load_ahb_NV{}
+		flow GF_rv_phy_pcs1_phy3_fw_load_ahb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs1_phy3_fw_load_ahb_NV{}
+		flow GF_rv_phy_pcs0_fw_load_ahb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs0_fw_load_ahb_NV{}
+		flow GF_rv_phy_pcs1_fw_load_ahb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs1_fw_load_ahb_NV{}
+		flow GF_rv_phy_pcs0_phy0_fw_load_apb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs0_phy0_fw_load_apb_NV{}
+		flow GF_rv_phy_pcs0_phy1_fw_load_apb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs0_phy1_fw_load_apb_NV{}
+		flow GF_rv_phy_pcs0_phy2_fw_load_apb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs0_phy2_fw_load_apb_NV{}
+		flow GF_rv_phy_pcs0_phy3_fw_load_apb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs0_phy3_fw_load_apb_NV{}
+		flow GF_rv_phy_pcs1_phy0_fw_load_apb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs1_phy0_fw_load_apb_NV{}
+		flow GF_rv_phy_pcs1_phy1_fw_load_apb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs1_phy1_fw_load_apb_NV{}
+		flow GF_rv_phy_pcs1_phy2_fw_load_apb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs1_phy2_fw_load_apb_NV{}
+		flow GF_rv_phy_pcs1_phy3_fw_load_apb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs1_phy3_fw_load_apb_NV{}
+		flow GF_rv_phy_pcs0_fw_load_apb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs0_fw_load_apb_NV{}
+		flow GF_rv_phy_pcs1_fw_load_apb_NV calls Flows.debug_0512_n1_noneScan.GF_rv_phy_pcs1_fw_load_apb_NV{}
+	}
+	execute {
+		GF_rv_hms0_ilbio_dwrd_NV.execute();
+		GF_rv_hms0_ilbio_generic_NV.execute();
+		GF_rv_hms0_init_NV.execute();
+		GF_rv_hms1_ilbio_dwrd_NV.execute();
+		GF_rv_hms1_ilbio_generic_NV.execute();
+		GF_rv_hms1_init_NV.execute();
+		GF_rv_hms1_ilbio_init_SPM_NV.execute();
+		GF_return_from_main_NV.execute();
+		GF_peakpower_vecmax_vfadd_core0_NV.execute();
+		GF_l2_miss_1p_core0_NV.execute();
+		GF_rv_phy_pcs0_phy0_fw_load_ahb_NV.execute();
+		GF_rv_phy_pcs0_phy1_fw_load_ahb_NV.execute();
+		GF_rv_phy_pcs0_phy2_fw_load_ahb_NV.execute();
+		GF_rv_phy_pcs0_phy3_fw_load_ahb_NV.execute();
+		GF_rv_phy_pcs1_phy0_fw_load_ahb_NV.execute();
+		GF_rv_phy_pcs1_phy1_fw_load_ahb_NV.execute();
+		GF_rv_phy_pcs1_phy2_fw_load_ahb_NV.execute();
+		GF_rv_phy_pcs1_phy3_fw_load_ahb_NV.execute();
+		GF_rv_phy_pcs0_fw_load_ahb_NV.execute();
+		GF_rv_phy_pcs1_fw_load_ahb_NV.execute();
+		GF_rv_phy_pcs0_phy0_fw_load_apb_NV.execute();
+		GF_rv_phy_pcs0_phy1_fw_load_apb_NV.execute();
+		GF_rv_phy_pcs0_phy2_fw_load_apb_NV.execute();
+		GF_rv_phy_pcs0_phy3_fw_load_apb_NV.execute();
+		GF_rv_phy_pcs1_phy0_fw_load_apb_NV.execute();
+		GF_rv_phy_pcs1_phy1_fw_load_apb_NV.execute();
+		GF_rv_phy_pcs1_phy2_fw_load_apb_NV.execute();
+		GF_rv_phy_pcs1_phy3_fw_load_apb_NV.execute();
+		GF_rv_phy_pcs0_fw_load_apb_NV.execute();
+		GF_rv_phy_pcs1_fw_load_apb_NV.execute();
+	}
+}

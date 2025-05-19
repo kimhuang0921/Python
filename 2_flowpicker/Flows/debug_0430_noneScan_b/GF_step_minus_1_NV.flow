@@ -1,0 +1,48 @@
+flow GF_step_minus_1_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite rv_top_pad_reset_40ns_042325_7 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0430_noneScan_b.rv_top_pad_reset_40ns_042325_7.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0430_noneScan_b.rv_top_pad_reset_40ns_042325_7.rv_top_pad_reset_40ns_042325_7_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_top_volatilerawunlock_40ns_041625_3 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0430_noneScan_b.rv_top_volatilerawunlock_40ns_041625_3.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0430_noneScan_b.rv_top_volatilerawunlock_40ns_041625_3.rv_top_volatilerawunlock_40ns_041625_3_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite load_runtime_042825_1 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0430_noneScan_b.load_runtime_042825_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0430_noneScan_b.load_runtime_042825_1.load_runtime_042825_1_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite step_minus_1_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0430_noneScan_b.step_minus_1_042925_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0430_noneScan_b.step_minus_1_042925_1.step_minus_1_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+	}
+	execute {
+		rv_top_pad_reset_40ns_042325_7.execute();
+
+		rv_top_volatilerawunlock_40ns_041625_3.execute();
+
+		load_runtime_042825_1.execute();
+
+		step_minus_1_NV.execute();
+
+	}
+}

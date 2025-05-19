@@ -1,0 +1,22 @@
+flow GF_rv_ccs_tcu_l1d_ClockBypass_40ns_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite rv_ccs_tcu_l1d_ClockBypass_40ns_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0428.rv_ccs_tcu_l1d_ClockBypass_40ns_042825_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0428.rv_ccs_tcu_l1d_ClockBypass_40ns_042825_1.rv_ccs_tcu_l1d_ClockBypass_40ns_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+	}
+	execute {
+		rv_ccs_tcu_l1d_ClockBypass_40ns_NV.execute();
+		if(failNonStop || rv_ccs_tcu_l1d_ClockBypass_40ns_NV.pass){
+		}else{
+			stop();
+		}
+
+	}
+}

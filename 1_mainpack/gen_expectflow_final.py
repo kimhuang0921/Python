@@ -11,7 +11,7 @@ DEFAULT_PREAMBLE_LOC = {
     "rv_top_volatilerawunlock_40ns": "/projects/ga0/patterns/preamble/prod/rv_top_volatilerawunlock/041625_3/rv_top_volatilerawunlock_40ns_041625_3.stil",
     "rv_scs_resetctn1ghz_tdr_40ns": "/projects/ga0/patterns/preamble/prod/rv_scs_resetctn1ghz_tdr/050925_7/rv_scs_resetctn1ghz_tdr_40ns_050925_7.stil",
     "rv_ss_resetClkDef_tdr_40ns": "/projects/ga0/patterns/preamble/prod/rv_ss_resetClkDef_tdr/042525_7/rv_ss_resetClkDef_tdr_40ns_042525_7.stil",
-    "load_runtime": "/projects/ga0/patterns/scan/eval/Scan/0516/rv_rcc_rvf_ldu_top_int_sa_scan_edt_pl_051525_2.stil.gz",
+    "load_runtime": "/projects/ga0/patterns/func/eval/050825/load_runtime_050825_1.stil",
     "rv_mbist_preamble_0_40ns": "/projects/ga0/patterns/preamble/prod/bulk/rv_mbist_preamble_0/042525_8/rv_mbist_preamble_0_40ns_042525_8.stil",
     "rv_phy_d2dns_ctn_preamble_0": "/projects/ga0/patterns/preamble/prod/bulk/rv_phy_d2dns_preamble_0/051525_5/rv_phy_d2dns_ctn_preamble_0_051525_5.stil"        
 }
@@ -294,7 +294,7 @@ def main(input_csv, output_xlsx=None):
         print("[ERROR] No valid patterns found in input CSV")
         return None, None, None
     if not output_xlsx:
-        output_xlsx = f"expectflow_{ts}.xlsx"
+        output_xlsx = f"{input_basename}_{ts}.xlsx"
     try:
         output_df.to_excel(output_xlsx, index=False)
         print(f"[INFO] Wrote {len(output_df)} rows to {output_xlsx}")
@@ -303,12 +303,27 @@ def main(input_csv, output_xlsx=None):
         return None, None, None
     full_path_df = df[['Pattern directory']].copy()
     full_path_df.columns = ['Full Path']
-    ts = datetime.now().strftime('%Y%m%d%H%M%S')
+
+    # 新增：添加 DEFAULT_PREAMBLE_LOC 的所有路徑
+    default_preamble_paths = list(DEFAULT_PREAMBLE_LOC.values())
+    existing_paths = set(full_path_df['Full Path'])
+    new_paths = [path for path in default_preamble_paths if path not in existing_paths]
+    if new_paths:
+        preamble_df = pd.DataFrame({'Full Path': new_paths})
+        full_path_df = pd.concat([full_path_df, preamble_df], ignore_index=True)
+        full_path_df = full_path_df.drop_duplicates(subset=['Full Path']).reset_index(drop=True)
+        print(f"[INFO] Added {len(new_paths)} DEFAULT_PREAMBLE_LOC paths to Full Path:")
+        for path in new_paths:
+            print(f"- {path}")
+    else:
+        print("[INFO] No new DEFAULT_PREAMBLE_LOC paths added (all already included)")
+
+    # 儲存 full_path_csv
     input_basename = os.path.splitext(os.path.basename(input_csv))[0]
     full_path_csv = f"{input_basename}_{ts}.csv"
     try:
         full_path_df.to_csv(full_path_csv, index=False)
-        print(f"[INFO] Wrote full path CSV: {full_path_csv}")
+        print(f"[INFO] Wrote full path CSV: {full_path_csv} with {len(full_path_df)} paths")
     except Exception as e:
         print(f"[ERROR] Failed to write CSV: {e}")
         return None, None, None

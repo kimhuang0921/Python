@@ -1,0 +1,72 @@
+flow GF_sign_of_life_2pe_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite rv_top_pad_reset_40ns_042325_7 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0502_noneScan.rv_top_pad_reset_40ns_042325_7.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0502_noneScan.rv_top_pad_reset_40ns_042325_7.rv_top_pad_reset_40ns_042325_7_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_top_volatilerawunlock_40ns_041625_3 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0502_noneScan.rv_top_volatilerawunlock_40ns_041625_3.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0502_noneScan.rv_top_volatilerawunlock_40ns_041625_3.rv_top_volatilerawunlock_40ns_041625_3_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite load_runtime_042825_1 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0502_noneScan.load_runtime_042825_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0502_noneScan.load_runtime_042825_1.load_runtime_042825_1_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite sign_of_life_2pe_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0502_noneScan.sign_of_life_2pe_050125_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0502_noneScan.sign_of_life_2pe_050125_1.sign_of_life_2pe_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+		suite return_from_main_1p_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0418.return_from_main_1p_041725_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0418.return_from_main_1p_041725_1.return_from_main_1p_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+		suite snl_halt_rcode_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0422_1.snl_halt_rcode_042125_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0422_1.snl_halt_rcode_042125_1.snl_halt_rcode_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+		suite snl_step_1_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0422_1.snl_step_1_042125_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0422_1.snl_step_1_042125_1.snl_step_1_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+	}
+	execute {
+		rv_top_pad_reset_40ns_042325_7.execute();
+
+		rv_top_volatilerawunlock_40ns_041625_3.execute();
+
+		load_runtime_042825_1.execute();
+		snl_halt_rcode_NV.execute();
+		snl_step_1_NV.execute();
+		return_from_main_1p_NV.execute();
+
+		sign_of_life_2pe_NV.execute();
+
+	}
+}

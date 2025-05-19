@@ -1,0 +1,29 @@
+flow GF_rvgd_fgw_pdp_0_mbist_n26_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite rv_mbist_preamble_0_40ns_042525_8 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0512_run_nv.rv_mbist_preamble_0_40ns_042525_8.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0512_run_nv.rv_mbist_preamble_0_40ns_042525_8.rv_mbist_preamble_0_40ns_042525_8_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rvgd_fgw_pdp_0_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0512_run_nv.rvgd_fgw_pdp_0_mbist_n26_041725_2.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0512_run_nv.rvgd_fgw_pdp_0_mbist_n26_041725_2.rvgd_fgw_pdp_0_mbist_n26_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+			suppressBinning = true;
+		}
+
+	}
+	execute {
+		rv_mbist_preamble_0_40ns_042525_8.execute();
+
+		rvgd_fgw_pdp_0_mbist_n26_NV.execute();
+
+	}
+}

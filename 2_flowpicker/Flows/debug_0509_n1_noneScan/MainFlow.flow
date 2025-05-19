@@ -1,0 +1,72 @@
+flow MainFlow {
+	setup{
+		flow GF_l1i_2048_16_NV calls Flows.debug_0509_n1_noneScan.GF_l1i_2048_16_NV{}
+		flow GF_l1i_2048_16_brpt_NV calls Flows.debug_0509_n1_noneScan.GF_l1i_2048_16_brpt_NV{}
+		flow GF_sign_of_life_2pe_rt_emu_NV calls Flows.debug_0509_n1_noneScan.GF_sign_of_life_2pe_rt_emu_NV{}
+		flow GF_sign_of_life_2pe_rt_full_NV calls Flows.debug_0509_n1_noneScan.GF_sign_of_life_2pe_rt_full_NV{}
+		flow GF_sign_of_life_rt_full_NV calls Flows.debug_0509_n1_noneScan.GF_sign_of_life_rt_full_NV{}
+		flow GF_PCS0_PHY0_pllbist_pcie_gen1_2_NV calls Flows.debug_0509_n1_noneScan.GF_PCS0_PHY0_pllbist_pcie_gen1_2_NV{}
+		flow GF_DMS0_6080_1to2_AllTests_RunTest_no_delay_NV calls Flows.debug_0509_n1_noneScan.GF_DMS0_6080_1to2_AllTests_RunTest_no_delay_NV{}
+		flow GF_DMS0_6080_1to2_SpmEnable_NV calls Flows.debug_0509_n1_noneScan.GF_DMS0_6080_1to2_SpmEnable_NV{}
+		flow GF_DMS0_6400_1to4_AllTests_RunTest_no_delay_NV calls Flows.debug_0509_n1_noneScan.GF_DMS0_6400_1to4_AllTests_RunTest_no_delay_NV{}
+		flow GF_DMS0_6400_1to4_SpmEnable_NV calls Flows.debug_0509_n1_noneScan.GF_DMS0_6400_1to4_SpmEnable_NV{}
+		flow GF_DMS1_6080_1to2_AllTests_RunTest_no_delay_NV calls Flows.debug_0509_n1_noneScan.GF_DMS1_6080_1to2_AllTests_RunTest_no_delay_NV{}
+		flow GF_DMS1_6080_1to2_SpmEnable_NV calls Flows.debug_0509_n1_noneScan.GF_DMS1_6080_1to2_SpmEnable_NV{}
+		flow GF_DMS1_6400_1to4_AllTests_RunTest_no_delay_NV calls Flows.debug_0509_n1_noneScan.GF_DMS1_6400_1to4_AllTests_RunTest_no_delay_NV{}
+		flow GF_DMS1_6400_1to4_SpmEnable_NV calls Flows.debug_0509_n1_noneScan.GF_DMS1_6400_1to4_SpmEnable_NV{}
+		flow GF_DMS2_6080_1to2_AllTests_RunTest_no_delay_NV calls Flows.debug_0509_n1_noneScan.GF_DMS2_6080_1to2_AllTests_RunTest_no_delay_NV{}
+		flow GF_DMS2_6080_1to2_SpmEnable_NV calls Flows.debug_0509_n1_noneScan.GF_DMS2_6080_1to2_SpmEnable_NV{}
+		flow GF_DMS2_6400_1to4_AllTests_RunTest_no_delay_NV calls Flows.debug_0509_n1_noneScan.GF_DMS2_6400_1to4_AllTests_RunTest_no_delay_NV{}
+		flow GF_DMS2_6400_1to4_SpmEnable_NV calls Flows.debug_0509_n1_noneScan.GF_DMS2_6400_1to4_SpmEnable_NV{}
+		flow GF_DMS0_6400_1to4_LoadMsgBlock_cl_slew8_NV calls Flows.debug_0509_n1_noneScan.GF_DMS0_6400_1to4_LoadMsgBlock_cl_slew8_NV{}
+		flow GF_DMS0_6400_1to4_LoadMsgBlock_cl_slewF_NV calls Flows.debug_0509_n1_noneScan.GF_DMS0_6400_1to4_LoadMsgBlock_cl_slewF_NV{}
+		flow GF_DMS0_6400_1to4_LoadMsgBlock_pl_slew8_NV calls Flows.debug_0509_n1_noneScan.GF_DMS0_6400_1to4_LoadMsgBlock_pl_slew8_NV{}
+		flow GF_DMS0_6400_1to4_LoadMsgBlock_pl_slewF_NV calls Flows.debug_0509_n1_noneScan.GF_DMS0_6400_1to4_LoadMsgBlock_pl_slewF_NV{}
+		flow GF_rv_lc_raw_to_unlocked0_NV calls Flows.debug_0509_n1_noneScan.GF_rv_lc_raw_to_unlocked0_NV{}
+		flow GF_rv_otp_secret0_NV calls Flows.debug_0509_n1_noneScan.GF_rv_otp_secret0_NV{}
+		flow GF_rv_lc_unlocked0_to_locked0_NV calls Flows.debug_0509_n1_noneScan.GF_rv_lc_unlocked0_to_locked0_NV{}
+		flow GF_rv_lc_locked0_to_unlocked1_NV calls Flows.debug_0509_n1_noneScan.GF_rv_lc_locked0_to_unlocked1_NV{}
+		flow GF_rv_lc_state_unlocked1_NV calls Flows.debug_0509_n1_noneScan.GF_rv_lc_state_unlocked1_NV{}
+		flow GF_rv_hms0_HmcClkFmax_tdr_40ns_NV calls Flows.debug_0509_n1_noneScan.GF_rv_hms0_HmcClkFmax_tdr_40ns_NV{}
+		flow GF_rv_hms1_HmcClkFmax_tdr_40ns_NV calls Flows.debug_0509_n1_noneScan.GF_rv_hms1_HmcClkFmax_tdr_40ns_NV{}
+		flow GF_rv_hms0_HmcClkFnom_tdr_NV calls Flows.debug_0509_n1_noneScan.GF_rv_hms0_HmcClkFnom_tdr_NV{}
+		flow GF_rv_hms1_HmcClkFnom_tdr_NV calls Flows.debug_0509_n1_noneScan.GF_rv_hms1_HmcClkFnom_tdr_NV{}
+		flow GF_rv_hms0_HmcClkFmin_tdr_NV calls Flows.debug_0509_n1_noneScan.GF_rv_hms0_HmcClkFmin_tdr_NV{}
+		flow GF_rv_hms1_HmcClkFmin_tdr_NV calls Flows.debug_0509_n1_noneScan.GF_rv_hms1_HmcClkFmin_tdr_NV{}
+	}
+	execute {
+		GF_l1i_2048_16_NV.execute();
+		GF_l1i_2048_16_brpt_NV.execute();
+		GF_sign_of_life_2pe_rt_emu_NV.execute();
+		GF_sign_of_life_2pe_rt_full_NV.execute();
+		GF_sign_of_life_rt_full_NV.execute();
+		GF_PCS0_PHY0_pllbist_pcie_gen1_2_NV.execute();
+		GF_DMS0_6080_1to2_AllTests_RunTest_no_delay_NV.execute();
+		GF_DMS0_6080_1to2_SpmEnable_NV.execute();
+		GF_DMS0_6400_1to4_AllTests_RunTest_no_delay_NV.execute();
+		GF_DMS0_6400_1to4_SpmEnable_NV.execute();
+		GF_DMS1_6080_1to2_AllTests_RunTest_no_delay_NV.execute();
+		GF_DMS1_6080_1to2_SpmEnable_NV.execute();
+		GF_DMS1_6400_1to4_AllTests_RunTest_no_delay_NV.execute();
+		GF_DMS1_6400_1to4_SpmEnable_NV.execute();
+		GF_DMS2_6080_1to2_AllTests_RunTest_no_delay_NV.execute();
+		GF_DMS2_6080_1to2_SpmEnable_NV.execute();
+		GF_DMS2_6400_1to4_AllTests_RunTest_no_delay_NV.execute();
+		GF_DMS2_6400_1to4_SpmEnable_NV.execute();
+		GF_DMS0_6400_1to4_LoadMsgBlock_cl_slew8_NV.execute();
+		GF_DMS0_6400_1to4_LoadMsgBlock_cl_slewF_NV.execute();
+		GF_DMS0_6400_1to4_LoadMsgBlock_pl_slew8_NV.execute();
+		GF_DMS0_6400_1to4_LoadMsgBlock_pl_slewF_NV.execute();
+		GF_rv_lc_raw_to_unlocked0_NV.execute();
+		GF_rv_otp_secret0_NV.execute();
+		GF_rv_lc_unlocked0_to_locked0_NV.execute();
+		GF_rv_lc_locked0_to_unlocked1_NV.execute();
+		GF_rv_lc_state_unlocked1_NV.execute();
+		GF_rv_hms0_HmcClkFmax_tdr_40ns_NV.execute();
+		GF_rv_hms1_HmcClkFmax_tdr_40ns_NV.execute();
+		GF_rv_hms0_HmcClkFnom_tdr_NV.execute();
+		GF_rv_hms1_HmcClkFnom_tdr_NV.execute();
+		GF_rv_hms0_HmcClkFmin_tdr_NV.execute();
+		GF_rv_hms1_HmcClkFmin_tdr_NV.execute();
+	}
+}

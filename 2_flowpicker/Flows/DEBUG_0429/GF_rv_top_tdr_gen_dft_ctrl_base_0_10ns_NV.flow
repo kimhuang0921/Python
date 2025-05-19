@@ -1,0 +1,22 @@
+flow GF_rv_top_tdr_gen_dft_ctrl_base_0_10ns_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite rv_top_tdr_gen_dft_ctrl_base_0_10ns_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0429.rv_top_tdr_gen_dft_ctrl_base_0_10ns_042925_5.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0429.rv_top_tdr_gen_dft_ctrl_base_0_10ns_042925_5.rv_top_tdr_gen_dft_ctrl_base_0_10ns_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+	}
+	execute {
+		rv_top_tdr_gen_dft_ctrl_base_0_10ns_NV.execute();
+		if(failNonStop || rv_top_tdr_gen_dft_ctrl_base_0_10ns_NV.pass){
+		}else{
+			stop();
+		}
+
+	}
+}

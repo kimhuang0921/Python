@@ -1,0 +1,22 @@
+flow GF_PCS0_PHY2_ATE_TEST_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite PCS0_PHY2_ATE_TEST_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0429_noon.output_PCS0_PHY2_ATE_TEST_042925_2.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0429_noon.output_PCS0_PHY2_ATE_TEST_042925_2.PCS0_PHY2_ATE_TEST_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+	}
+	execute {
+		PCS0_PHY2_ATE_TEST_NV.execute();
+		if(failNonStop || PCS0_PHY2_ATE_TEST_NV.pass){
+		}else{
+			stop();
+		}
+
+	}
+}

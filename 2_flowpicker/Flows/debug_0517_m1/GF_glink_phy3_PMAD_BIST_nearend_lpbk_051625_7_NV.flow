@@ -1,0 +1,28 @@
+flow GF_glink_phy3_PMAD_BIST_nearend_lpbk_051625_7_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite rv_phy_d2dns_ctn_preamble_0_051525_5 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0517_m1.rv_phy_d2dns_ctn_preamble_0_051525_5.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0517_m1.rv_phy_d2dns_ctn_preamble_0_051525_5.rv_phy_d2dns_ctn_preamble_0_051525_5_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite glink_phy3_PMAD_BIST_nearend_lpbk_051625_7_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0517_m1.glink_phy3_PMAD_BIST_nearend_lpbk_051625_7.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0517_m1.glink_phy3_PMAD_BIST_nearend_lpbk_051625_7.glink_phy3_PMAD_BIST_nearend_lpbk_051625_7_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+	}
+	execute {
+		rv_phy_d2dns_ctn_preamble_0_051525_5.execute();
+
+		glink_phy3_PMAD_BIST_nearend_lpbk_051625_7_NV.execute();
+
+	}
+}

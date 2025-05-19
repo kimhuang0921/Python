@@ -1,0 +1,80 @@
+flow DEBUG_0430_noon {
+    setup{
+        flow GF_bootrom_brkp_list_043025_1 calls Flows.DEBUG_0430_noon.GF_bootrom_brkp_list_043025_1{}
+
+        flow GF_rv_dms_rvdms0_fib_pdp_ssn_loopback_NV calls Flows.DEBUG_0430_noon.GF_rv_dms_rvdms0_fib_pdp_ssn_loopback_NV{}
+        flow GF_rv_dms_rvdms0_fib_pdp_int_sa_chain_edt_pl_NV calls Flows.DEBUG_0430_noon.GF_rv_dms_rvdms0_fib_pdp_int_sa_chain_edt_pl_NV{}
+        flow GF_rv_dms_rvdms0_fib_pdp_int_sa_scan_edt_pl_NV calls Flows.DEBUG_0430_noon.GF_rv_dms_rvdms0_fib_pdp_int_sa_scan_edt_pl_NV{}
+
+        flow GF_rv_dms_rvdms1_fib_pdp_ssn_loopback_NV calls Flows.DEBUG_0430_noon.GF_rv_dms_rvdms1_fib_pdp_ssn_loopback_NV{}
+        flow GF_rv_dms_rvdms1_fib_pdp_int_sa_chain_edt_pl_NV calls Flows.DEBUG_0430_noon.GF_rv_dms_rvdms1_fib_pdp_int_sa_chain_edt_pl_NV{}
+        flow GF_rv_dms_rvdms1_fib_pdp_int_sa_scan_edt_pl_NV calls Flows.DEBUG_0430_noon.GF_rv_dms_rvdms1_fib_pdp_int_sa_scan_edt_pl_NV{}
+
+        flow GF_rv_dms_rvdms2_fib_pdp_ssn_loopback_NV calls Flows.DEBUG_0430_noon.GF_rv_dms_rvdms2_fib_pdp_ssn_loopback_NV{}
+        flow GF_rv_dms_rvdms2_fib_pdp_int_sa_chain_edt_pl_NV calls Flows.DEBUG_0430_noon.GF_rv_dms_rvdms2_fib_pdp_int_sa_chain_edt_pl_NV{}
+        flow GF_rv_dms_rvdms2_fib_pdp_int_sa_scan_edt_pl_NV calls Flows.DEBUG_0430_noon.GF_rv_dms_rvdms2_fib_pdp_int_sa_scan_edt_pl_NV{}
+
+        flow GF_rvhms0_hbm8ch_pdp_DN_ssn_loopback_NV calls Flows.DEBUG_0430_noon.GF_rvhms0_hbm8ch_pdp_DN_ssn_loopback_NV{}
+        flow GF_rvhms0_hbm8ch_pdp_DN_int_sa_chain_edt_pl_NV calls Flows.DEBUG_0430_noon.GF_rvhms0_hbm8ch_pdp_DN_int_sa_chain_edt_pl_NV{}
+        flow GF_rvhms0_hbm8ch_pdp_DN_int_sa_scan_edt_pl_NV calls Flows.DEBUG_0430_noon.GF_rvhms0_hbm8ch_pdp_DN_int_sa_scan_edt_pl_NV{}
+
+        flow GF_rvhms0_hbm8ch_pdp_UP_ssn_loopback_NV calls Flows.DEBUG_0430_noon.GF_rvhms0_hbm8ch_pdp_UP_ssn_loopback_NV{}
+        flow GF_rvhms0_hbm8ch_pdp_UP_int_sa_chain_edt_pl_NV calls Flows.DEBUG_0430_noon.GF_rvhms0_hbm8ch_pdp_UP_int_sa_chain_edt_pl_NV{}
+        flow GF_rvhms0_hbm8ch_pdp_UP_int_sa_scan_edt_pl_NV calls Flows.DEBUG_0430_noon.GF_rvhms0_hbm8ch_pdp_UP_int_sa_scan_edt_pl_NV{}
+        flow GF_rvsds_dce_pdp_int_tdf_scan_edt_pl_NV calls Flows.DEBUG_0430_noon.GF_rvsds_dce_pdp_int_tdf_scan_edt_pl_NV{}
+        shmoo shmoo_flow {
+            target = GF_rvhms0_hbm8ch_pdp_UP_int_sa_scan_edt_pl_NV;
+            axis[X_axis] = {
+                resourceType  = specVariable;
+                //resourceName  = "Timings.DEBUG_0429.rv_ccs_CoreClkFmax_tdr_40ns_042925_2.project_tim_specs.per_AllRefClkPins10ns_wvt";
+                //resourceName =  "Timings.DEBUG_0422_1.all_core_l1d_mbist_n26_042225_1.project_tim_specs.per_AllRefClkPins10ns_wvt";
+                //resourceName =  "Timings.DEBUG_0428_afternoon2.output_rv_mbist_pre_tdr_40ns_042825_1.project_tim_specs.per_AllRefClkPins10ns_wvt";
+                resourceName="Timings.DEBUG_0430_noon.rvhms0_hbm8ch_pdp_UP_int_sa_scan_edt_pl_042825_1.project_tim_specs.per_10" ;
+//                resourceName = "Timings.DEBUG_0430_noon.rv_scs_resetctn1ghz_tdr_40ns_042025_5.project_tim_specs.per_AllRefClkPins10ns_wvt";
+                range.steps  = 15;
+                range.start  = 15e-9;
+                range.stop  = 6e-9;
+//                tracking[aaa]= {
+//                    resourceType  = specVariable;
+//                    //resourceName  = "Timings.DEBUG_0423_Scan.rcc_ifd_m1_mbist_n26_041725_2.project_tim_specs.per_AllRefClkPins10ns_wvt";
+////                    resourceName =  "Timings.DEBUG_0430_noon.rvsds_dce_pdp_int_tdf_scan_edt_pl_042825_1.project_tim_specs.per_AllRefClkPins10ns_wvt";
+//                    //resourceName =  "Timings.DEBUG_0423_Scan.rcc_ifd_m0_mbist_n26_041725_2.project_tim_specs.per_AllRefClkPins10ns_wvt";
+//                    //resourceName =  "Timings.DEBUG_0423_Scan.rvgd_fgw_pdp_0_mbist_n26_041725_2.project_tim_specs.per_AllRefClkPins10ns_wvt";
+//                    //resourceName = "Timings.DEBUG_0421.rvgd_fgw_pdp_1_bisr_041825_1.project_tim_specs.per_AllRefClkPins10ns_wvt";
+//                    //range.steps  = 20;
+//                    range.start  = 15e-9;
+//                    range.stop  = 6e-9;
+//                };
+            };
+            axis[Y_axis] = {
+                resourceType  = specVariable;
+                resourceName  = "Levels.DFT_Vtyp.DFT_Vtyp_specValue.VDD_DIP_HMS0";
+                range.steps  = 15;
+                range.start  = 0.5;
+                range.stop  = 1;
+            };
+            bypass = false;
+        }
+        flow GF_rv_ccs_CoreClkFnom_tdr_40ns_NV calls Flows.DEBUG_0429.GF_rv_ccs_CoreClkFnom_tdr_40ns_NV{}
+    }
+    execute {
+        GF_bootrom_brkp_list_043025_1.execute();
+        GF_rv_dms_rvdms0_fib_pdp_ssn_loopback_NV.execute();
+        GF_rv_dms_rvdms0_fib_pdp_int_sa_chain_edt_pl_NV.execute();
+        GF_rv_dms_rvdms0_fib_pdp_int_sa_scan_edt_pl_NV.execute();
+        GF_rv_dms_rvdms1_fib_pdp_ssn_loopback_NV.execute();
+        GF_rv_dms_rvdms1_fib_pdp_int_sa_chain_edt_pl_NV.execute();
+        GF_rv_dms_rvdms1_fib_pdp_int_sa_scan_edt_pl_NV.execute();
+        GF_rv_dms_rvdms2_fib_pdp_ssn_loopback_NV.execute();
+        GF_rv_dms_rvdms2_fib_pdp_int_sa_chain_edt_pl_NV.execute();
+        GF_rv_dms_rvdms2_fib_pdp_int_sa_scan_edt_pl_NV.execute();
+        GF_rvhms0_hbm8ch_pdp_DN_ssn_loopback_NV.execute();
+        GF_rvhms0_hbm8ch_pdp_DN_int_sa_chain_edt_pl_NV.execute();
+        GF_rvhms0_hbm8ch_pdp_DN_int_sa_scan_edt_pl_NV.execute();
+        GF_rvhms0_hbm8ch_pdp_UP_ssn_loopback_NV.execute();
+        GF_rvhms0_hbm8ch_pdp_UP_int_sa_chain_edt_pl_NV.execute();
+        GF_rvhms0_hbm8ch_pdp_UP_int_sa_scan_edt_pl_NV.execute();
+        GF_rvsds_dce_pdp_int_tdf_scan_edt_pl_NV.execute();
+        shmoo_flow.execute();
+    }
+}

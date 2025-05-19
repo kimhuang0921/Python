@@ -1,0 +1,50 @@
+flow DEBUG_0502_nonScan {
+	setup{
+		flow GF_brk_06000000_NV calls Flows.DEBUG_0502_noneScan.GF_brk_06000000_NV{}
+		flow GF_brk_06000400_NV calls Flows.DEBUG_0502_noneScan.GF_brk_06000400_NV{}
+		flow GF_lram_step_NV calls Flows.DEBUG_0502_noneScan.GF_lram_step_NV{}
+		flow GF_lw_lram_NV calls Flows.DEBUG_0502_noneScan.GF_lw_lram_NV{}
+		flow GF_sign_of_life_2pe_NV calls Flows.DEBUG_0502_noneScan.GF_sign_of_life_2pe_NV{}
+		flow GF_bootrom_brkp_single_no_fatal_spi_host_init_NV calls Flows.DEBUG_0502_noneScan.GF_bootrom_brkp_single_no_fatal_spi_host_init_NV{}
+		flow GF_bootrom_brkp_list_no_fatal_spi_host_init_NV calls Flows.DEBUG_0502_noneScan.GF_bootrom_brkp_list_no_fatal_spi_host_init_NV{}
+		flow GF_bootrom_brkp_list_fatal_spi_host_init_NV calls Flows.DEBUG_0502_noneScan.GF_bootrom_brkp_list_fatal_spi_host_init_NV{}
+		flow GF_glink_phy0_pll_loss_of_lock_test_NV calls Flows.DEBUG_0502_noneScan.GF_glink_phy0_pll_loss_of_lock_test_NV{}
+		flow GF_glink_phy1_pll_loss_of_lock_test_NV calls Flows.DEBUG_0502_noneScan.GF_glink_phy1_pll_loss_of_lock_test_NV{}
+		flow GF_glink_phy2_pll_loss_of_lock_test_NV calls Flows.DEBUG_0502_noneScan.GF_glink_phy2_pll_loss_of_lock_test_NV{}
+		flow GF_glink_phy3_pll_loss_of_lock_test_NV calls Flows.DEBUG_0502_noneScan.GF_glink_phy3_pll_loss_of_lock_test_NV{}
+		flow GF_glink_phy4_pll_loss_of_lock_test_NV calls Flows.DEBUG_0502_noneScan.GF_glink_phy4_pll_loss_of_lock_test_NV{}
+		flow GF_rv_ccs_CoreClkFmax_tdr_NV calls Flows.DEBUG_0502_noneScan.GF_rv_ccs_CoreClkFmax_tdr_NV{}
+		flow GF_rv_ccs_CoreClkFnom_tdr_NV calls Flows.DEBUG_0502_noneScan.GF_rv_ccs_CoreClkFnom_tdr_NV{}
+		flow GF_rv_ccs_CoreClkFmin_tdr_NV calls Flows.DEBUG_0502_noneScan.GF_rv_ccs_CoreClkFmin_tdr_NV{}
+		flow GF_rv_hms_HmcClkFnom_tdr_NV calls Flows.DEBUG_0502_noneScan.GF_rv_hms_HmcClkFnom_tdr_NV{}
+		flow GF_rcc_core0_ifd_m0_sone_4N_ECOFIX_NV calls Flows.DEBUG_0502_noneScan.GF_rcc_core0_ifd_m0_sone_4N_ECOFIX_NV{}
+		flow GF_rcc_core0_ifd_m0_sone_4NDOWN_NV calls Flows.DEBUG_0502_noneScan.GF_rcc_core0_ifd_m0_sone_4NDOWN_NV{}
+		flow GF_rcc_core0_ifd_m0_sone_4NROWFIRST_NV calls Flows.DEBUG_0502_noneScan.GF_rcc_core0_ifd_m0_sone_4NROWFIRST_NV{}
+		flow GF_rcc_core0_ifd_m0_mbist_4NDOWN_NV calls Flows.DEBUG_0502_noneScan.GF_rcc_core0_ifd_m0_mbist_4NDOWN_NV{}
+		flow GF_rcc_core0_ifd_m0_mbist_4NECOFIX_NV calls Flows.DEBUG_0502_noneScan.GF_rcc_core0_ifd_m0_mbist_4NECOFIX_NV{}
+	}
+	execute {
+		GF_brk_06000000_NV.execute();
+		GF_brk_06000400_NV.execute();
+		GF_lram_step_NV.execute();
+		GF_lw_lram_NV.execute();
+		GF_sign_of_life_2pe_NV.execute();
+		GF_bootrom_brkp_single_no_fatal_spi_host_init_NV.execute();
+		GF_bootrom_brkp_list_no_fatal_spi_host_init_NV.execute();
+		GF_bootrom_brkp_list_fatal_spi_host_init_NV.execute();
+		GF_glink_phy0_pll_loss_of_lock_test_NV.execute();
+		GF_glink_phy1_pll_loss_of_lock_test_NV.execute();
+		GF_glink_phy2_pll_loss_of_lock_test_NV.execute();
+		GF_glink_phy3_pll_loss_of_lock_test_NV.execute();
+		GF_glink_phy4_pll_loss_of_lock_test_NV.execute();
+		GF_rv_ccs_CoreClkFmax_tdr_NV.execute();
+		GF_rv_ccs_CoreClkFnom_tdr_NV.execute();
+		GF_rv_ccs_CoreClkFmin_tdr_NV.execute();
+		GF_rv_hms_HmcClkFnom_tdr_NV.execute();
+		GF_rcc_core0_ifd_m0_sone_4N_ECOFIX_NV.execute();
+		GF_rcc_core0_ifd_m0_sone_4NDOWN_NV.execute();
+		GF_rcc_core0_ifd_m0_sone_4NROWFIRST_NV.execute();
+		GF_rcc_core0_ifd_m0_mbist_4NDOWN_NV.execute();
+		GF_rcc_core0_ifd_m0_mbist_4NECOFIX_NV.execute();
+	}
+}

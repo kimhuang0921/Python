@@ -1,0 +1,18 @@
+flow GF_DMS0_6080_1to2_LMB_cl_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite DMS0_6080_1to2_LMB_cl_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0513_n2.DMS0_6080_1to2_LMB_cl_051325_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0513_n2.DMS0_6080_1to2_LMB_cl_051325_1.DMS0_6080_1to2_LMB_cl_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+	}
+	execute {
+		DMS0_6080_1to2_LMB_cl_NV.execute();
+
+	}
+}

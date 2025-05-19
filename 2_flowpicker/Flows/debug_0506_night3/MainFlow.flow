@@ -1,0 +1,32 @@
+flow MainFlow {
+	setup{
+		flow GF_rv_phy_d2dns_pll_lol_phy0_40ns_NV calls Flows.debug_0506_night3.GF_rv_phy_d2dns_pll_lol_phy0_40ns_NV{}
+		flow GF_rv_phy_d2dns_pll_lol_phy1_40ns_NV calls Flows.debug_0506_night3.GF_rv_phy_d2dns_pll_lol_phy1_40ns_NV{}
+		flow GF_rv_phy_d2dns_pll_lol_phy2_40ns_NV calls Flows.debug_0506_night3.GF_rv_phy_d2dns_pll_lol_phy2_40ns_NV{}
+		flow GF_rv_phy_d2dns_pll_lol_phy3_40ns_NV calls Flows.debug_0506_night3.GF_rv_phy_d2dns_pll_lol_phy3_40ns_NV{}
+		flow GF_rv_phy_d2dns_pll_lol_phy4_40ns_NV calls Flows.debug_0506_night3.GF_rv_phy_d2dns_pll_lol_phy4_40ns_NV{}
+		flow GF_rv_nsEfuse_R_40ns_NV calls Flows.debug_0506_night3.GF_rv_nsEfuse_R_40ns_NV{}
+		flow GF_rv_nsEfuse_W_40ns_NV calls Flows.debug_0506_night3.GF_rv_nsEfuse_W_40ns_NV{}
+		flow GF_rom_read_NV calls Flows.debug_0506_night3.GF_rom_read_NV{}
+		flow GF_bootrom_base_rom_main_NV calls Flows.debug_0506_night3.GF_bootrom_base_rom_main_NV{}
+		flow GF_bootrom_spi_host_init_NV calls Flows.debug_0506_night3.GF_bootrom_spi_host_init_NV{}
+		flow GF_bootrom_second_rom_main_NV calls Flows.debug_0506_night3.GF_bootrom_second_rom_main_NV{}
+		flow GF_bootrom_second_rom_preamble_NV calls Flows.debug_0506_night3.GF_bootrom_second_rom_preamble_NV{}
+		flow GF_bootrom_second_rom_epilogue_NV calls Flows.debug_0506_night3.GF_bootrom_second_rom_epilogue_NV{}
+	}
+	execute {
+		GF_rv_phy_d2dns_pll_lol_phy0_40ns_NV.execute();
+		GF_rv_phy_d2dns_pll_lol_phy1_40ns_NV.execute();
+		GF_rv_phy_d2dns_pll_lol_phy2_40ns_NV.execute();
+		GF_rv_phy_d2dns_pll_lol_phy3_40ns_NV.execute();
+		GF_rv_phy_d2dns_pll_lol_phy4_40ns_NV.execute();
+		GF_rv_nsEfuse_R_40ns_NV.execute();
+		GF_rv_nsEfuse_W_40ns_NV.execute();
+		GF_rom_read_NV.execute();
+		GF_bootrom_base_rom_main_NV.execute();
+		GF_bootrom_spi_host_init_NV.execute();
+		GF_bootrom_second_rom_main_NV.execute();
+		GF_bootrom_second_rom_preamble_NV.execute();
+		GF_bootrom_second_rom_epilogue_NV.execute();
+	}
+}

@@ -1,0 +1,129 @@
+flow MainFlow {
+    setup{
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE52_ssn_loopback_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE52_ssn_loopback_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE52_int_sa_chain_edt_pl_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE52_int_sa_chain_edt_pl_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE52_int_sa_scan_edt_pl_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE52_int_sa_scan_edt_pl_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE53_ssn_loopback_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE53_ssn_loopback_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE53_int_sa_chain_edt_pl_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE53_int_sa_chain_edt_pl_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE53_int_sa_scan_edt_pl_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE53_int_sa_scan_edt_pl_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y3_PE55_ssn_loopback_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y3_PE55_ssn_loopback_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y3_PE55_int_sa_chain_edt_pl_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y3_PE55_int_sa_chain_edt_pl_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y3_PE55_int_sa_scan_edt_pl_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y3_PE55_int_sa_scan_edt_pl_NV{}
+        flow GF_rv_rcc_rvf_lds_wrap_ssn_loopback_NV calls Flows.debug_0513_m1.GF_rv_rcc_rvf_lds_wrap_ssn_loopback_NV{}
+        flow GF_rv_rcc_rvf_lds_wrap_int_sa_chain_edt_pl_NV calls Flows.debug_0513_m1.GF_rv_rcc_rvf_lds_wrap_int_sa_chain_edt_pl_NV{}
+        flow GF_rv_rcc_rvf_lds_wrap_int_sa_scan_edt_pl_NV calls Flows.debug_0513_m1.GF_rv_rcc_rvf_lds_wrap_int_sa_scan_edt_pl_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x1_sub_grid_x1_y3_PE31_ssn_loopback_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x1_sub_grid_x1_y3_PE31_ssn_loopback_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x1_sub_grid_x1_y3_PE31_int_sa_chain_edt_pl_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x1_sub_grid_x1_y3_PE31_int_sa_chain_edt_pl_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x1_sub_grid_x1_y3_PE31_int_sa_scan_edt_pl_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x1_sub_grid_x1_y3_PE31_int_sa_scan_edt_pl_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x1_y0_PE57_ssn_loopback_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x1_y0_PE57_ssn_loopback_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x1_y0_PE57_int_sa_chain_edt_pl_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x1_y0_PE57_int_sa_chain_edt_pl_NV{}
+        flow GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x1_y0_PE57_int_sa_scan_edt_pl_NV calls Flows.debug_0513_m1.GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x1_y0_PE57_int_sa_scan_edt_pl_NV{}
+        flow GF_glink_phy0_PMAD_BIST_nearend_lpbk_NV calls Flows.debug_0513_m1.GF_glink_phy0_PMAD_BIST_nearend_lpbk_NV{}
+        flow GF_glink_phy1_PMAD_BIST_nearend_lpbk_NV calls Flows.debug_0513_m1.GF_glink_phy1_PMAD_BIST_nearend_lpbk_NV{}
+        flow GF_glink_phy2_PMAD_BIST_nearend_lpbk_NV calls Flows.debug_0513_m1.GF_glink_phy2_PMAD_BIST_nearend_lpbk_NV{}
+        flow GF_glink_phy3_PMAD_BIST_nearend_lpbk_NV calls Flows.debug_0513_m1.GF_glink_phy3_PMAD_BIST_nearend_lpbk_NV{}
+        flow GF_glink_phy4_PMAD_BIST_nearend_lpbk_NV calls Flows.debug_0513_m1.GF_glink_phy4_PMAD_BIST_nearend_lpbk_NV{}
+        flow GF_rvgd_fgw_pdp_0_mbist_2W3R_N26_NV calls Flows.debug_0513_m1.GF_rvgd_fgw_pdp_0_mbist_2W3R_N26_NV{}
+        flow GF_rvgd_fgw_pdp_1_mbist_2W3R_N26_NV calls Flows.debug_0513_m1.GF_rvgd_fgw_pdp_1_mbist_2W3R_N26_NV{}
+        flow GF_rvgd_fgw_pdp_2_mbist_2W3R_N26_NV calls Flows.debug_0513_m1.GF_rvgd_fgw_pdp_2_mbist_2W3R_N26_NV{}
+        flow GF_rvgd_fgw_pdp_3_mbist_2W3R_N26_NV calls Flows.debug_0513_m1.GF_rvgd_fgw_pdp_3_mbist_2W3R_N26_NV{}
+        flow GF_rva_llch_grid_channel_east_wrapper_mbist_2W3R_N26_NV calls Flows.debug_0513_m1.GF_rva_llch_grid_channel_east_wrapper_mbist_2W3R_N26_NV{}
+        flow GF_rva_llch_grid_channel_west_wrapper_mbist_2W3R_N26_NV calls Flows.debug_0513_m1.GF_rva_llch_grid_channel_west_wrapper_mbist_2W3R_N26_NV{}
+        flow GF_rv_sba_ccs_self_time_bypass_cfg_NV calls Flows.debug_0513_m1.GF_rv_sba_ccs_self_time_bypass_cfg_NV{}
+        flow GF_rv_nsEfuse_W_40ns_NV calls Flows.debug_0513_m1.GF_rv_nsEfuse_W_40ns_NV{}
+        flow GF_rv_nsEfuse_R_40ns_NV calls Flows.debug_0513_m1.GF_rv_nsEfuse_R_40ns_NV{}
+        flow GF_rv_phy_pcs0_fw_load_ahb_mex_NV calls Flows.debug_0513_m1.GF_rv_phy_pcs0_fw_load_ahb_mex_NV{}
+        flow GF_rv_phy_pcs0_fw_load_apb_mex_NV calls Flows.debug_0513_m1.GF_rv_phy_pcs0_fw_load_apb_mex_NV{}
+        flow GF_rv_phy_pcs0_patch5_fw_load_ahb_NV calls Flows.debug_0513_m1.GF_rv_phy_pcs0_patch5_fw_load_ahb_NV{}
+        flow GF_rv_phy_pcs0_phy0_patch5_fw_load_ahb_NV calls Flows.debug_0513_m1.GF_rv_phy_pcs0_phy0_patch5_fw_load_ahb_NV{}
+        flow GF_rv_phy_pcs0_phy0_patch5_fw_load_apb_NV calls Flows.debug_0513_m1.GF_rv_phy_pcs0_phy0_patch5_fw_load_apb_NV{}
+        flow GF_rv_phy_pcs0_phy0_rst_fw_load_ahb_NV calls Flows.debug_0513_m1.GF_rv_phy_pcs0_phy0_rst_fw_load_ahb_NV{}
+        flow GF_rv_phy_pcs0_phy0_rst_fw_load_apb_NV calls Flows.debug_0513_m1.GF_rv_phy_pcs0_phy0_rst_fw_load_apb_NV{}
+        flow GF_rv_phy_pcs0_phy0_rst_patch5_fw_load_apb_NV calls Flows.debug_0513_m1.GF_rv_phy_pcs0_phy0_rst_patch5_fw_load_apb_NV{}
+        flow GF_rv_phy_pcs0_rst_NV calls Flows.debug_0513_m1.GF_rv_phy_pcs0_rst_NV{}
+        flow GF_rv_phy_pcs0_rst_fw_load_ahb_NV calls Flows.debug_0513_m1.GF_rv_phy_pcs0_rst_fw_load_ahb_NV{}
+        flow GF_rv_phy_pcs0_rst_fw_load_apb_NV calls Flows.debug_0513_m1.GF_rv_phy_pcs0_rst_fw_load_apb_NV{}
+        flow GF_rcc_core0_ifd_m0_mbist_4N_1W8R_NV calls Flows.debug_0510_m1_noneScan.GF_rcc_core0_ifd_m0_mbist_4N_1W8R_NV{}
+        flow GF_rcc_core0_ifd_m0_mbist_4N_1W8R_DOWN_NV calls Flows.debug_0510_m1_noneScan.GF_rcc_core0_ifd_m0_mbist_4N_1W8R_DOWN_NV{}
+        flow GF_rcc_core0_ifd_m0_sone_4N_1W8R_NV calls Flows.debug_0510_m1_noneScan.GF_rcc_core0_ifd_m0_sone_4N_1W8R_NV{}
+        flow GF_rcc_core0_ifd_m0_sone_4N_1W8R_DOWN_NV calls Flows.debug_0510_m1_noneScan.GF_rcc_core0_ifd_m0_sone_4N_1W8R_DOWN_NV{}
+        shmoo shmoo_flow {
+            target = GF_rcc_core0_ifd_m0_mbist_4N_1W8R_NV;
+            axis[X_axis] = {
+                resourceType  = specVariable;
+                resourceName  = "Levels.DFT_Vtyp.DFT_Vtyp_specValue.VDD_CPU";
+                range.steps  = 20;
+                range.start  = 1.2;
+                range.stop  = 0.5;
+            };
+            axis[Y_axis] = {
+                resourceType  = specVariable;
+                //resourceName  = "Timings.DEBUG_0426_1_noneDMS.rv_ccs_CoreClkFnom_sba_40ns_042626_1.project_tim_specs.per_AllRefClkPins10ns_wvt";
+                //resourceName = "Timings.DEBUG_0424_DMS.rv_scs_resetctn1ghz_tdr_40ns_042025_5.project_tim_specs.per_AllRefClkPins10ns_wvt";
+                resourceName = "Timings.debug_0510_m1_noneScan.rv_mbist_preamble_0_40ns_042525_8.project_tim_specs.per_AllRefClkPins10ns_wvt";
+                range.steps  = 9;
+                range.start  = 15e-9;
+                range.stop  = 6e-9;
+                tracking[aaa]= {
+                    resourceType  = specVariable;
+                    //resourceName  = "Timings.DEBUG_0423_Scan.rcc_ifd_m1_mbist_n26_041725_2.project_tim_specs.per_AllRefClkPins10ns_wvt";
+                    resourceName =  "Timings.debug_0510_m1_noneScan.rcc_core0_ifd_m0_mbist_4N_1W8R_DOWN_051025_1.project_tim_specs.per_AllRefClkPins10ns_wvt";
+                    //Timings.debug_0510_m1_noneScan.rcc_core0_ifd_m0_mbist_4N_1W8R_DOWN_051025_1.project_tim_specs
+                    //range.steps  = 20;
+                    range.start  = 15e-9;
+                    range.stop  = 6e-9;
+                };
+            };
+
+        }
+        flow GF_rvsds_rot_ssn_continuity_pl_NV calls Flows.DEBUG_0425.GF_rvsds_rot_ssn_continuity_pl_NV{}
+    }
+    execute {
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE52_ssn_loopback_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE52_int_sa_chain_edt_pl_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE52_int_sa_scan_edt_pl_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE53_ssn_loopback_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE53_int_sa_chain_edt_pl_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y2_PE53_int_sa_scan_edt_pl_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y3_PE55_ssn_loopback_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y3_PE55_int_sa_chain_edt_pl_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x0_y3_PE55_int_sa_scan_edt_pl_NV.execute();
+        GF_rv_rcc_rvf_lds_wrap_ssn_loopback_NV.execute();
+        GF_rv_rcc_rvf_lds_wrap_int_sa_chain_edt_pl_NV.execute();
+        GF_rv_rcc_rvf_lds_wrap_int_sa_scan_edt_pl_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x1_sub_grid_x1_y3_PE31_ssn_loopback_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x1_sub_grid_x1_y3_PE31_int_sa_chain_edt_pl_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x1_sub_grid_x1_y3_PE31_int_sa_scan_edt_pl_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x1_y0_PE57_ssn_loopback_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x1_y0_PE57_int_sa_chain_edt_pl_NV.execute();
+        GF_rva_dpa_grid_ddp_sub_grid_ddp_x3_sub_grid_x1_y0_PE57_int_sa_scan_edt_pl_NV.execute();
+        GF_glink_phy0_PMAD_BIST_nearend_lpbk_NV.execute();
+        GF_glink_phy1_PMAD_BIST_nearend_lpbk_NV.execute();
+        GF_glink_phy2_PMAD_BIST_nearend_lpbk_NV.execute();
+        GF_glink_phy3_PMAD_BIST_nearend_lpbk_NV.execute();
+        GF_glink_phy4_PMAD_BIST_nearend_lpbk_NV.execute();
+        GF_rvgd_fgw_pdp_0_mbist_2W3R_N26_NV.execute();
+        GF_rvgd_fgw_pdp_1_mbist_2W3R_N26_NV.execute();
+        GF_rvgd_fgw_pdp_2_mbist_2W3R_N26_NV.execute();
+        GF_rvgd_fgw_pdp_3_mbist_2W3R_N26_NV.execute();
+        GF_rva_llch_grid_channel_east_wrapper_mbist_2W3R_N26_NV.execute();
+        GF_rva_llch_grid_channel_west_wrapper_mbist_2W3R_N26_NV.execute();
+        GF_rcc_core0_ifd_m0_mbist_4N_1W8R_NV.execute();
+        shmoo_flow.execute();
+        GF_rcc_core0_ifd_m0_mbist_4N_1W8R_DOWN_NV.execute();
+        GF_rv_sba_ccs_self_time_bypass_cfg_NV.execute();
+        GF_rv_nsEfuse_W_40ns_NV.execute();
+        GF_rv_nsEfuse_R_40ns_NV.execute();
+        GF_rv_phy_pcs0_fw_load_ahb_mex_NV.execute();
+        GF_rv_phy_pcs0_fw_load_apb_mex_NV.execute();
+        GF_rv_phy_pcs0_patch5_fw_load_ahb_NV.execute();
+        GF_rv_phy_pcs0_phy0_patch5_fw_load_ahb_NV.execute();
+        GF_rv_phy_pcs0_phy0_patch5_fw_load_apb_NV.execute();
+        GF_rv_phy_pcs0_phy0_rst_fw_load_ahb_NV.execute();
+        GF_rv_phy_pcs0_phy0_rst_fw_load_apb_NV.execute();
+        GF_rv_phy_pcs0_phy0_rst_patch5_fw_load_apb_NV.execute();
+        GF_rv_phy_pcs0_rst_NV.execute();
+        GF_rv_phy_pcs0_rst_fw_load_ahb_NV.execute();
+        GF_rv_phy_pcs0_rst_fw_load_apb_NV.execute();
+    }
+}

@@ -1,0 +1,54 @@
+flow GF_fgw_0_mbist_4N_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite rv_mbist_preamble_0_40ns_042525_8 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0505_noneScan.rv_mbist_preamble_0_40ns_042525_8.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0505_noneScan.rv_mbist_preamble_0_40ns_042525_8.rv_mbist_preamble_0_40ns_042525_8_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite fgw_0_mbist_4N_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0505_noneScan.fgw_0_mbist_4N_050425_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0505_noneScan.fgw_0_mbist_4N_050425_1.fgw_0_mbist_4N_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+		suite rv_mbist_preamble_0_40ns_042525_8Copy calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0502_NOON_noneScan.rv_mbist_preamble_0_40ns_042525_8.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0502_NOON_noneScan.rv_mbist_preamble_0_40ns_042525_8.rv_mbist_preamble_0_40ns_042525_8_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+        suite rva_llch_grid_channel_east_wrapper_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rva_llch_grid_channel_east_wrapper_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rva_llch_grid_channel_east_wrapper_mbist_n26_041725_2.rva_llch_grid_channel_east_wrapper_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = false;
+        }
+		suite rva_llch_grid_east_MC8_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0421_4.rva_llch_grid_east_MC8_mbist_n26_042125_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0421_4.rva_llch_grid_east_MC8_mbist_n26_042125_1.rva_llch_grid_east_MC8_mbist_n26_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+
+	}
+	execute {
+		rv_mbist_preamble_0_40ns_042525_8Copy.execute();
+		rva_llch_grid_channel_east_wrapper_mbist_n26_NV.execute();
+		rva_llch_grid_east_MC8_mbist_n26_NV.execute();
+		rv_mbist_preamble_0_40ns_042525_8.execute();
+
+		fgw_0_mbist_4N_NV.execute();
+
+	}
+}

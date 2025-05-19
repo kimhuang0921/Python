@@ -107,7 +107,7 @@ def package_release(df, dry_run=False, output_path=None, input_name=None, xlsx_p
 
     # Copy files to first-level directories using rsync
     for path in df["Full Path"]:
-        path = path.strip()
+        path = str(path).strip() if not pd.isna(path) else ''
         if not path:
             print("[INVALID] Skipping empty path")
             results.append((path, "INVALID"))

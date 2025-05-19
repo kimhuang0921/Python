@@ -1,0 +1,36 @@
+flow MainFlow {
+	setup{
+		flow GF_rfm_info_NV calls Flows.debug_0505_noon_noneScan.GF_rfm_info_NV{}
+		flow GF_dhry_info_NV calls Flows.debug_0505_noon_noneScan.GF_dhry_info_NV{}
+		flow GF_rfm_step_200_NV calls Flows.debug_0505_noon_noneScan.GF_rfm_step_200_NV{}
+		flow GF_rfm_step_400_NV calls Flows.debug_0505_noon_noneScan.GF_rfm_step_400_NV{}
+		flow GF_bootrom_pwc_boot_NV calls Flows.debug_0505_noon_noneScan.GF_bootrom_pwc_boot_NV{}
+		flow GF_bootrom_rom_patch_NV calls Flows.debug_0505_noon_noneScan.GF_bootrom_rom_patch_NV{}
+		flow GF_fgw_0_mbist_fgwd_NV calls Flows.debug_0505_noon_noneScan.GF_fgw_0_mbist_fgwd_NV{}
+		flow GF_fgw_0_mbist_4N_NV calls Flows.debug_0505_noon_noneScan.GF_fgw_0_mbist_4N_NV{}
+		flow GF_fgw_0_mbist_noTlbSc_NV calls Flows.debug_0505_noon_noneScan.GF_fgw_0_mbist_noTlbSc_NV{}
+		flow GF_rv_ema_fgw_aauIommu_test1_40ns_NV calls Flows.debug_0505_noon_noneScan.GF_rv_ema_fgw_aauIommu_test1_40ns_NV{}
+		flow GF_rv_ema_fgw_aauIommu_rme1_40ns_NV calls Flows.debug_0505_noon_noneScan.GF_rv_ema_fgw_aauIommu_rme1_40ns_NV{}
+		flow GF_rv_ema_fgw_aauIommu_rme1_rm3_40ns_NV calls Flows.debug_0505_noon_noneScan.GF_rv_ema_fgw_aauIommu_rme1_rm3_40ns_NV{}
+		flow GF_rv_ema_fgw_ioc_rme1_rm3_40ns_NV calls Flows.debug_0505_noon_noneScan.GF_rv_ema_fgw_ioc_rme1_rm3_40ns_NV{}
+		flow GF_rv_ema_fgw_ioc_rme1_40ns_NV calls Flows.debug_0505_noon_noneScan.GF_rv_ema_fgw_ioc_rme1_40ns_NV{}
+		flow GF_rv_ema_fgw_ioc_test1_40ns_NV calls Flows.debug_0505_noon_noneScan.GF_rv_ema_fgw_ioc_test1_40ns_NV{}
+	}
+	execute {
+		GF_rfm_info_NV.execute();
+		GF_dhry_info_NV.execute();
+		GF_rfm_step_200_NV.execute();
+		GF_rfm_step_400_NV.execute();
+		GF_bootrom_pwc_boot_NV.execute();
+		GF_bootrom_rom_patch_NV.execute();
+		GF_fgw_0_mbist_fgwd_NV.execute();
+		GF_fgw_0_mbist_4N_NV.execute();
+		GF_fgw_0_mbist_noTlbSc_NV.execute();
+		GF_rv_ema_fgw_aauIommu_test1_40ns_NV.execute();
+		GF_rv_ema_fgw_aauIommu_rme1_40ns_NV.execute();
+		GF_rv_ema_fgw_aauIommu_rme1_rm3_40ns_NV.execute();
+		GF_rv_ema_fgw_ioc_rme1_rm3_40ns_NV.execute();
+		GF_rv_ema_fgw_ioc_rme1_40ns_NV.execute();
+		GF_rv_ema_fgw_ioc_test1_40ns_NV.execute();
+	}
+}

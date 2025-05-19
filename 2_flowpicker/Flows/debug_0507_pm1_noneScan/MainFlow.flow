@@ -1,0 +1,20 @@
+flow MainFlow {
+	setup{
+		flow GF_rv_hcs_FabClkFmax_tdr_40ns_NV calls Flows.debug_0507_pm1_noneScan.GF_rv_hcs_FabClkFmax_tdr_40ns_NV{}
+		flow GF_rv_hcs_FabClkFmin_tdr_40ns_NV calls Flows.debug_0507_pm1_noneScan.GF_rv_hcs_FabClkFmin_tdr_40ns_NV{}
+		flow GF_bootrom_second_rom_rom_patch_NV calls Flows.debug_0507_pm1_noneScan.GF_bootrom_second_rom_rom_patch_NV{}
+		flow GF_load_runtime_NV calls Flows.debug_0507_pm1_noneScan.GF_load_runtime_NV{}
+		flow GF_load_2pe_runtime_NV calls Flows.debug_0507_pm1_noneScan.GF_load_2pe_runtime_NV{}
+		flow GF_lram_dma_128K_NV calls Flows.debug_0507_pm1_noneScan.GF_lram_dma_128K_NV{}
+		flow GF_lram_dma_256K_NV calls Flows.debug_0507_pm1_noneScan.GF_lram_dma_256K_NV{}
+	}
+	execute {
+		GF_rv_hcs_FabClkFmax_tdr_40ns_NV.execute();
+		GF_rv_hcs_FabClkFmin_tdr_40ns_NV.execute();
+		GF_bootrom_second_rom_rom_patch_NV.execute();
+		GF_load_runtime_NV.execute();
+		GF_load_2pe_runtime_NV.execute();
+		GF_lram_dma_128K_NV.execute();
+		GF_lram_dma_256K_NV.execute();
+	}
+}

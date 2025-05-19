@@ -1,0 +1,40 @@
+flow MainFlow {
+    setup{
+//        flow GF_DMS0_MsgBlockDump_NV calls Flows.debug_0515_m2.GF_DMS0_MsgBlockDump_NV{}
+//        flow GF_DMS1_MsgBlockDump_NV calls Flows.debug_0515_m2.GF_DMS1_MsgBlockDump_NV{}
+//        flow GF_DMS2_MsgBlockDump_NV calls Flows.debug_0515_m2.GF_DMS2_MsgBlockDump_NV{}
+//        flow GF_PCS0_PHY0_pllbist_gen1_2_bl_basic_NV calls Flows.debug_0515_m2.GF_PCS0_PHY0_pllbist_gen1_2_bl_basic_NV{}
+//        flow GF_PCS0_PHY0_pllbist_gen1_2_bl_debug_NV calls Flows.debug_0515_m2.GF_PCS0_PHY0_pllbist_gen1_2_bl_debug_NV{}
+//        flow GF_PCS0_PHY0_pllbist_gen1_2_bl_no_mloop_basic_NV calls Flows.debug_0515_m2.GF_PCS0_PHY0_pllbist_gen1_2_bl_no_mloop_basic_NV{}
+//        flow GF_PCS0_PHY0_pllbist_gen1_2_bl_no_mloop_debug_NV calls Flows.debug_0515_m2.GF_PCS0_PHY0_pllbist_gen1_2_bl_no_mloop_debug_NV{}
+        flow GF_rcc_core0_ifd_m0_mbist_4N_1W4R_NV calls Flows.debug_0515_m2.GF_rcc_core0_ifd_m0_mbist_4N_1W4R_NV{}
+        flow GF_rcc_core0_ifd_m0_sone_4N_1W4R_NV calls Flows.debug_0515_m2.GF_rcc_core0_ifd_m0_sone_4N_1W4R_NV{}
+        flow GF_rcc_core1_ifd_m0_mbist_4N_1W4R_NV calls Flows.debug_0515_m2.GF_rcc_core1_ifd_m0_mbist_4N_1W4R_NV{}
+        flow GF_rcc_core1_ifd_m0_sone_4N_1W4R_NV calls Flows.debug_0515_m2.GF_rcc_core1_ifd_m0_sone_4N_1W4R_NV{}
+        flow GF_rcc_core2_ifd_m0_mbist_4N_1W4R_NV calls Flows.debug_0515_m2.GF_rcc_core2_ifd_m0_mbist_4N_1W4R_NV{}
+        flow GF_rcc_core2_ifd_m0_sone_4N_1W4R_NV calls Flows.debug_0515_m2.GF_rcc_core2_ifd_m0_sone_4N_1W4R_NV{}
+        flow GF_rcc_core3_ifd_m0_mbist_4N_1W4R_NV calls Flows.debug_0515_m2.GF_rcc_core3_ifd_m0_mbist_4N_1W4R_NV{}
+        flow GF_rcc_core3_ifd_m0_sone_4N_1W4R_NV calls Flows.debug_0515_m2.GF_rcc_core3_ifd_m0_sone_4N_1W4R_NV{}
+        flow GF_rcc_core0_ifd_m0_sone_4N_1W8R_NV calls Flows.debug_0510_m1_noneScan.GF_rcc_core0_ifd_m0_sone_4N_1W8R_NV{}
+        flow GF_rcc_core0_ifd_m0_mbist_4N_1W8R_NV calls Flows.debug_0510_m1_noneScan.GF_rcc_core0_ifd_m0_mbist_4N_1W8R_NV{}
+    }
+    execute {
+//        GF_DMS0_MsgBlockDump_NV.execute();
+//        GF_DMS1_MsgBlockDump_NV.execute();
+//        GF_DMS2_MsgBlockDump_NV.execute();
+//        GF_PCS0_PHY0_pllbist_gen1_2_bl_basic_NV.execute();
+//        GF_PCS0_PHY0_pllbist_gen1_2_bl_debug_NV.execute();
+//        GF_PCS0_PHY0_pllbist_gen1_2_bl_no_mloop_basic_NV.execute();
+//        GF_PCS0_PHY0_pllbist_gen1_2_bl_no_mloop_debug_NV.execute();
+        GF_rcc_core0_ifd_m0_mbist_4N_1W8R_NV.execute();
+        GF_rcc_core0_ifd_m0_sone_4N_1W8R_NV.execute();
+        GF_rcc_core0_ifd_m0_mbist_4N_1W4R_NV.execute();
+        GF_rcc_core0_ifd_m0_sone_4N_1W4R_NV.execute();
+        GF_rcc_core1_ifd_m0_mbist_4N_1W4R_NV.execute();
+        GF_rcc_core1_ifd_m0_sone_4N_1W4R_NV.execute();
+        GF_rcc_core2_ifd_m0_mbist_4N_1W4R_NV.execute();
+        GF_rcc_core2_ifd_m0_sone_4N_1W4R_NV.execute();
+        GF_rcc_core3_ifd_m0_mbist_4N_1W4R_NV.execute();
+        GF_rcc_core3_ifd_m0_sone_4N_1W4R_NV.execute();
+    }
+}

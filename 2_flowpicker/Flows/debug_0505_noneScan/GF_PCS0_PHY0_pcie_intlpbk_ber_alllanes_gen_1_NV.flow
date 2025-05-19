@@ -1,0 +1,68 @@
+flow GF_PCS0_PHY0_pcie_intlpbk_ber_alllanes_gen_1_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite rv_top_pad_reset_40ns_042325_7 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0505_noneScan.rv_top_pad_reset_40ns_042325_7.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0505_noneScan.rv_top_pad_reset_40ns_042325_7.rv_top_pad_reset_40ns_042325_7_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_top_volatilerawunlock_40ns_041625_3 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0505_noneScan.rv_top_volatilerawunlock_40ns_041625_3.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0505_noneScan.rv_top_volatilerawunlock_40ns_041625_3.rv_top_volatilerawunlock_40ns_041625_3_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_scs_resetctn1ghz_tdr_40ns_042025_5 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0505_noneScan.rv_scs_resetctn1ghz_tdr_40ns_042025_5.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0505_noneScan.rv_scs_resetctn1ghz_tdr_40ns_042025_5.rv_scs_resetctn1ghz_tdr_40ns_042025_5_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_ss_resetClkDef_tdr_40ns_042525_7 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0505_noneScan.rv_ss_resetClkDef_tdr_40ns_042525_7.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0505_noneScan.rv_ss_resetClkDef_tdr_40ns_042525_7.rv_ss_resetClkDef_tdr_40ns_042525_7_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_phy_pcs_preamble_ctn_40ns_043025_4 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0505_noneScan.rv_phy_pcs_preamble_ctn_40ns_043025_4.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0505_noneScan.rv_phy_pcs_preamble_ctn_40ns_043025_4.rv_phy_pcs_preamble_ctn_40ns_043025_4_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite PCS0_PHY0_pcie_intlpbk_ber_alllanes_gen_1_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0505_noneScan.PCS0_PHY0_pcie_intlpbk_ber_alllanes_gen_1_050325_2.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0505_noneScan.PCS0_PHY0_pcie_intlpbk_ber_alllanes_gen_1_050325_2.PCS0_PHY0_pcie_intlpbk_ber_alllanes_gen_1_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+	}
+	execute {
+		rv_top_pad_reset_40ns_042325_7.execute();
+
+		rv_top_volatilerawunlock_40ns_041625_3.execute();
+
+		rv_scs_resetctn1ghz_tdr_40ns_042025_5.execute();
+
+		rv_ss_resetClkDef_tdr_40ns_042525_7.execute();
+
+		rv_phy_pcs_preamble_ctn_40ns_043025_4.execute();
+
+		PCS0_PHY0_pcie_intlpbk_ber_alllanes_gen_1_NV.execute();
+
+	}
+}

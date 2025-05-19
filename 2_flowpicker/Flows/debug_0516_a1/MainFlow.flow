@@ -1,0 +1,88 @@
+flow MainFlow {
+    setup{
+        flow GF_glink_phy0_PMAD_BIST_nearend_lpbk_NV calls Flows.debug_0516_a1.GF_glink_phy0_PMAD_BIST_nearend_lpbk_NV{}
+        flow GF_glink_phy1_PMAD_BIST_nearend_lpbk_NV calls Flows.debug_0516_a1.GF_glink_phy1_PMAD_BIST_nearend_lpbk_NV{}
+        flow GF_glink_phy2_PMAD_BIST_nearend_lpbk_NV calls Flows.debug_0516_a1.GF_glink_phy2_PMAD_BIST_nearend_lpbk_NV{}
+        flow GF_glink_phy3_PMAD_BIST_nearend_lpbk_NV calls Flows.debug_0516_a1.GF_glink_phy3_PMAD_BIST_nearend_lpbk_NV{}
+        flow GF_glink_phy4_PMAD_BIST_nearend_lpbk_NV calls Flows.debug_0516_a1.GF_glink_phy4_PMAD_BIST_nearend_lpbk_NV{}
+        flow GF_rv_ddns_rvddns_rici1_pdp_int_sa_edt_ts_NV calls Flows.debug_0516_a1.GF_rv_ddns_rvddns_rici1_pdp_int_sa_edt_ts_NV{}
+        flow GF_rv_ddns_rvddns_rici1_pdp_ssn_loopback_NV calls Flows.debug_0516_a1.GF_rv_ddns_rvddns_rici1_pdp_ssn_loopback_NV{}
+        flow GF_rv_ddns_rvddns_rici1_pdp_int_sa_chain_edt_pl_NV calls Flows.debug_0516_a1.GF_rv_ddns_rvddns_rici1_pdp_int_sa_chain_edt_pl_NV{}
+        flow GF_rv_ddns_rvddns_rici1_pdp_int_sa_scan_edt_pl_NV calls Flows.debug_0516_a1.GF_rv_ddns_rvddns_rici1_pdp_int_sa_scan_edt_pl_NV{}
+        flow GF_PCS0_PHY0_pllbist_pcie_gen1_2_NV calls Flows.debug_0516_a1.GF_PCS0_PHY0_pllbist_pcie_gen1_2_NV{}
+        flow GF_PCS0_PHY0_pllbist_pcie_gen1_2_freqcnt_NV calls Flows.debug_0516_a1.GF_PCS0_PHY0_pllbist_pcie_gen1_2_freqcnt_NV{}
+        flow GF_rv_rcc_rcc_pmd_int_sa_edt_ts_NV calls Flows.debug_0516_a1.GF_rv_rcc_rcc_pmd_int_sa_edt_ts_NV{}
+        flow GF_rv_rcc_rcc_pmd_ssn_loopback_NV calls Flows.debug_0516_a1.GF_rv_rcc_rcc_pmd_ssn_loopback_NV{}
+        flow GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_NV calls Flows.debug_0516_a1.GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_NV{}
+        flow GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_NV calls Flows.debug_0516_a1.GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_NV{}
+        flow GF_ffonly_sz131072_of0_i1000_bup_core0_info_051625_1_NV calls Flows.debug_0516_a1.GF_ffonly_sz131072_of0_i1000_bup_core0_info_051625_1_NV{}
+        flow GF_ffonly_sz131072_of0_i1000_bup_core0_051625_1_NV calls Flows.debug_0516_a1.GF_ffonly_sz131072_of0_i1000_bup_core0_051625_1_NV{}
+        flow GF_gaps_first_sz131072_of0_i1000_bup_core0_info_051625_1_NV calls Flows.debug_0516_a1.GF_gaps_first_sz131072_of0_i1000_bup_core0_info_051625_1_NV{}
+        flow GF_gaps_first_sz131072_of0_i1000_bup_core0_051625_1_NV calls Flows.debug_0516_a1.GF_gaps_first_sz131072_of0_i1000_bup_core0_051625_1_NV{}
+        flow GF_gaps_inner_sz131072_of0_i1000_bup_core0_info_051625_1_NV calls Flows.debug_0516_a1.GF_gaps_inner_sz131072_of0_i1000_bup_core0_info_051625_1_NV{}
+        flow GF_gaps_inner_sz131072_of0_i1000_bup_core0_051625_1_NV calls Flows.debug_0516_a1.GF_gaps_inner_sz131072_of0_i1000_bup_core0_051625_1_NV{}
+        flow GF_gaps_last_sz131072_of0_i1000_bup_core0_info_051625_1_NV calls Flows.debug_0516_a1.GF_gaps_last_sz131072_of0_i1000_bup_core0_info_051625_1_NV{}
+        flow GF_gaps_last_sz131072_of0_i1000_bup_core0_051625_1_NV calls Flows.debug_0516_a1.GF_gaps_last_sz131072_of0_i1000_bup_core0_051625_1_NV{}
+        flow GF_gaps_outer_sz131072_of0_i1000_bup_core0_info_051625_1_NV calls Flows.debug_0516_a1.GF_gaps_outer_sz131072_of0_i1000_bup_core0_info_051625_1_NV{}
+        flow GF_gaps_outer_sz131072_of0_i1000_bup_core0_051625_1_NV calls Flows.debug_0516_a1.GF_gaps_outer_sz131072_of0_i1000_bup_core0_051625_1_NV{}
+        flow GF_jump_to_self_sz0_of0_i1000000_bup_core0_info_051625_1_NV calls Flows.debug_0516_a1.GF_jump_to_self_sz0_of0_i1000000_bup_core0_info_051625_1_NV{}
+        flow GF_jump_to_self_sz0_of0_i1000000_bup_core0_051625_1_NV calls Flows.debug_0516_a1.GF_jump_to_self_sz0_of0_i1000000_bup_core0_051625_1_NV{}
+        flow GF_lui2_sz131072_of0_i1000_bup_core0_info_051625_1_NV calls Flows.debug_0516_a1.GF_lui2_sz131072_of0_i1000_bup_core0_info_051625_1_NV{}
+        flow GF_lui2_sz131072_of0_i1000_bup_core0_051625_1_NV calls Flows.debug_0516_a1.GF_lui2_sz131072_of0_i1000_bup_core0_051625_1_NV{}
+        flow GF_lui2_sz32768_of0_i1000_bup_core0_info_051625_1_NV calls Flows.debug_0516_a1.GF_lui2_sz32768_of0_i1000_bup_core0_info_051625_1_NV{}
+        flow GF_lui2_sz32768_of0_i1000_bup_core0_051625_1_NV calls Flows.debug_0516_a1.GF_lui2_sz32768_of0_i1000_bup_core0_051625_1_NV{}
+        flow GF_lui2_sz65536_of0_i1000_bup_core0_info_051625_1_NV calls Flows.debug_0516_a1.GF_lui2_sz65536_of0_i1000_bup_core0_info_051625_1_NV{}
+        flow GF_lui2_sz65536_of0_i1000_bup_core0_051625_1_NV calls Flows.debug_0516_a1.GF_lui2_sz65536_of0_i1000_bup_core0_051625_1_NV{}
+        flow GF_lui_sz131072_of0_i1000_bup_core0_info_051625_1_NV calls Flows.debug_0516_a1.GF_lui_sz131072_of0_i1000_bup_core0_info_051625_1_NV{}
+        flow GF_lui_sz131072_of0_i1000_bup_core0_051625_1_NV calls Flows.debug_0516_a1.GF_lui_sz131072_of0_i1000_bup_core0_051625_1_NV{}
+        flow GF_lui_sz32768_of0_i1000_bup_core0_info_051625_1_NV calls Flows.debug_0516_a1.GF_lui_sz32768_of0_i1000_bup_core0_info_051625_1_NV{}
+        flow GF_lui_sz32768_of0_i1000_bup_core0_051625_1_NV calls Flows.debug_0516_a1.GF_lui_sz32768_of0_i1000_bup_core0_051625_1_NV{}
+        flow GF_lui_sz65536_of0_i1000_bup_core0_info_051625_1_NV calls Flows.debug_0516_a1.GF_lui_sz65536_of0_i1000_bup_core0_info_051625_1_NV{}
+        flow GF_lui_sz65536_of0_i1000_bup_core0_051625_1_NV calls Flows.debug_0516_a1.GF_lui_sz65536_of0_i1000_bup_core0_051625_1_NV{}
+        flow GF_rv_phy_pcs0_fw_load_sanity_large_NV calls Flows.debug_0516_a1.GF_rv_phy_pcs0_fw_load_sanity_large_NV{}
+        flow GF_rv_phy_pcs0_fw_load_sanity_med_NV calls Flows.debug_0516_a1.GF_rv_phy_pcs0_fw_load_sanity_med_NV{}
+    }
+    execute {
+//		GF_glink_phy0_PMAD_BIST_nearend_lpbk_NV.execute();
+//		GF_glink_phy1_PMAD_BIST_nearend_lpbk_NV.execute();
+//		GF_glink_phy2_PMAD_BIST_nearend_lpbk_NV.execute();
+//		GF_glink_phy3_PMAD_BIST_nearend_lpbk_NV.execute();
+//		GF_glink_phy4_PMAD_BIST_nearend_lpbk_NV.execute();
+//        GF_rv_ddns_rvddns_rici1_pdp_int_sa_edt_ts_NV.execute();
+//        GF_rv_ddns_rvddns_rici1_pdp_ssn_loopback_NV.execute();
+//        GF_rv_ddns_rvddns_rici1_pdp_int_sa_chain_edt_pl_NV.execute();
+//        GF_rv_ddns_rvddns_rici1_pdp_int_sa_scan_edt_pl_NV.execute();
+////		GF_PCS0_PHY0_pllbist_pcie_gen1_2_NV.execute();
+////		GF_PCS0_PHY0_pllbist_pcie_gen1_2_freqcnt_NV.execute();
+//        GF_rv_rcc_rcc_pmd_int_sa_edt_ts_NV.execute();
+//        GF_rv_rcc_rcc_pmd_ssn_loopback_NV.execute();
+//        GF_rv_rcc_rcc_pmd_int_sa_chain_edt_pl_NV.execute();
+//        GF_rv_rcc_rcc_pmd_int_sa_scan_edt_pl_NV.execute();
+        GF_ffonly_sz131072_of0_i1000_bup_core0_info_051625_1_NV.execute();
+//        GF_ffonly_sz131072_of0_i1000_bup_core0_051625_1_NV.execute();
+        GF_gaps_first_sz131072_of0_i1000_bup_core0_info_051625_1_NV.execute();
+//        GF_gaps_first_sz131072_of0_i1000_bup_core0_051625_1_NV.execute();
+        GF_gaps_inner_sz131072_of0_i1000_bup_core0_info_051625_1_NV.execute();
+//        GF_gaps_inner_sz131072_of0_i1000_bup_core0_051625_1_NV.execute();
+        GF_gaps_last_sz131072_of0_i1000_bup_core0_info_051625_1_NV.execute();
+//        GF_gaps_last_sz131072_of0_i1000_bup_core0_051625_1_NV.execute();
+        GF_gaps_outer_sz131072_of0_i1000_bup_core0_info_051625_1_NV.execute();
+//        GF_gaps_outer_sz131072_of0_i1000_bup_core0_051625_1_NV.execute();
+        GF_jump_to_self_sz0_of0_i1000000_bup_core0_info_051625_1_NV.execute();
+//        GF_jump_to_self_sz0_of0_i1000000_bup_core0_051625_1_NV.execute();
+        GF_lui2_sz131072_of0_i1000_bup_core0_info_051625_1_NV.execute();
+//        GF_lui2_sz131072_of0_i1000_bup_core0_051625_1_NV.execute();
+        GF_lui2_sz32768_of0_i1000_bup_core0_info_051625_1_NV.execute();
+//        GF_lui2_sz32768_of0_i1000_bup_core0_051625_1_NV.execute();
+        GF_lui2_sz65536_of0_i1000_bup_core0_info_051625_1_NV.execute();
+//        GF_lui2_sz65536_of0_i1000_bup_core0_051625_1_NV.execute();
+        GF_lui_sz131072_of0_i1000_bup_core0_info_051625_1_NV.execute();
+//        GF_lui_sz131072_of0_i1000_bup_core0_051625_1_NV.execute();
+        GF_lui_sz32768_of0_i1000_bup_core0_info_051625_1_NV.execute();
+//        GF_lui_sz32768_of0_i1000_bup_core0_051625_1_NV.execute();
+        GF_lui_sz65536_of0_i1000_bup_core0_info_051625_1_NV.execute();
+//        GF_lui_sz65536_of0_i1000_bup_core0_051625_1_NV.execute();
+//        GF_rv_phy_pcs0_fw_load_sanity_large_NV.execute();
+//        GF_rv_phy_pcs0_fw_load_sanity_med_NV.execute();
+    }
+}

@@ -1,0 +1,18 @@
+flow GF_rv_phy_pcs0_bootload_fw_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite rv_phy_pcs0_bootload_fw_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.debug_0513_n2.rv_phy_pcs0_bootload_fw_051325_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.debug_0513_n2.rv_phy_pcs0_bootload_fw_051325_1.rv_phy_pcs0_bootload_fw_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+	}
+	execute {
+		rv_phy_pcs0_bootload_fw_NV.execute();
+
+	}
+}

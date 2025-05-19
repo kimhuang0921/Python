@@ -1,0 +1,106 @@
+flow GF_rvgdie_dms0sch0_ssn_loopback_dbg_NV {
+	in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+	setup {
+		
+		suite rv_top_pad_reset_40ns_042325_7 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0428.rv_top_pad_reset_40ns_042325_7.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0428.rv_top_pad_reset_40ns_042325_7.rv_top_pad_reset_40ns_042325_7_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_top_volatilerawunlock_40ns_041625_3 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0428.rv_top_volatilerawunlock_40ns_041625_3.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0428.rv_top_volatilerawunlock_40ns_041625_3.rv_top_volatilerawunlock_40ns_041625_3_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_scs_resetctn1ghz_tdr_40ns_042025_5 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0428.rv_scs_resetctn1ghz_tdr_40ns_042025_5.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0428.rv_scs_resetctn1ghz_tdr_40ns_042025_5.rv_scs_resetctn1ghz_tdr_40ns_042025_5_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_ss_resetClkDef_tdr_40ns_042525_7 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0428.rv_ss_resetClkDef_tdr_40ns_042525_7.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0428.rv_ss_resetClkDef_tdr_40ns_042525_7.rv_ss_resetClkDef_tdr_40ns_042525_7_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_kaiju_abc_40ns_042325_1 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0428.rv_kaiju_abc_40ns_042325_1.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0428.rv_kaiju_abc_40ns_042325_1.rv_kaiju_abc_40ns_042325_1_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rv_top_ddrbypass_40ns_041625_3 calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0428.rv_top_ddrbypass_40ns_041625_3.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0428.rv_top_ddrbypass_40ns_041625_3.rv_top_ddrbypass_40ns_041625_3_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+		suite rvgdie_dms0sch0_ssn_loopback_dbg_NV calls digital.FunctionalTest_wo_profiling{
+			timingSpec=setupRef(Timings.DEBUG_0428.rvgdie_dms0sch0_ssn_loopback_dbg_042625_5.project_tim_specs);
+			levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+			operatingSequence=setupRef(Patterns.DEBUG_0428.rvgdie_dms0sch0_ssn_loopback_dbg_042625_5.rvgdie_dms0sch0_ssn_loopback_dbg_NV_Pseq);
+			maxFailedCycles=2000;
+			ffvCycles=2000;
+		}
+
+	}
+	execute {
+		rv_top_pad_reset_40ns_042325_7.execute();
+		if(failNonStop || rv_top_pad_reset_40ns_042325_7.pass){
+		}else{
+			stop();
+		}
+
+		rv_top_volatilerawunlock_40ns_041625_3.execute();
+		if(failNonStop || rv_top_volatilerawunlock_40ns_041625_3.pass){
+		}else{
+			stop();
+		}
+
+		rv_scs_resetctn1ghz_tdr_40ns_042025_5.execute();
+		if(failNonStop || rv_scs_resetctn1ghz_tdr_40ns_042025_5.pass){
+		}else{
+			stop();
+		}
+
+		rv_ss_resetClkDef_tdr_40ns_042525_7.execute();
+		if(failNonStop || rv_ss_resetClkDef_tdr_40ns_042525_7.pass){
+		}else{
+			stop();
+		}
+
+		rv_kaiju_abc_40ns_042325_1.execute();
+		if(failNonStop || rv_kaiju_abc_40ns_042325_1.pass){
+		}else{
+			stop();
+		}
+
+		rv_top_ddrbypass_40ns_041625_3.execute();
+		if(failNonStop || rv_top_ddrbypass_40ns_041625_3.pass){
+		}else{
+			stop();
+		}
+
+		rvgdie_dms0sch0_ssn_loopback_dbg_NV.execute();
+		if(failNonStop || rvgdie_dms0sch0_ssn_loopback_dbg_NV.pass){
+		}else{
+			stop();
+		}
+
+	}
+}

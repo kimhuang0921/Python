@@ -39,8 +39,10 @@ def cleanup_files(xlsx_path, fullpath_csv):
     try:
         if xlsx_path and os.path.exists(xlsx_path):
             os.remove(xlsx_path)
+            print(f"[INFO] Deleted {xlsx_path}")
         if fullpath_csv and os.path.exists(fullpath_csv):
             os.remove(fullpath_csv)
+            print(f"[INFO] Deleted {fullpath_csv}")
     except Exception as e:
         print(f"[CLEANUP-ERROR] Failed to delete generated files: {e}")
 

@@ -1,0 +1,284 @@
+flow GF_rv_ccs_CoreClkFnom_tdr_40ns_NV {
+    in failNonStop = testProgramVariables.getBoolean("SYS.OFFLINE") || testProgramVariables.getBoolean("TP_FAIL_NON_STOP");
+    setup {
+
+
+
+
+
+
+
+
+
+        suite rv_ccs_CoreClkFnom_tdr_40ns_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0429.rv_ccs_CoreClkFmax_tdr_40ns_042925_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0429.rv_ccs_CoreClkFmax_tdr_40ns_042925_2.rv_ccs_CoreClkFmax_tdr_40ns_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+
+        }
+        suite rv_mbist_pre_tdr_40ns_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0428_afternoon2.output_rv_mbist_pre_tdr_40ns_042825_1.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0428_afternoon2.output_rv_mbist_pre_tdr_40ns_042825_1.rv_mbist_pre_tdr_40ns_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+
+            bypass = true;
+
+            }
+/*onalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0429.rv_top_sba_pmd_fllbypass_40ns_042925_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0429.rv_top_sba_pmd_fllbypass_40ns_042925_2.rv_top_sba_pmd_fllbypass_40ns_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }*/
+        suite all_core_l1d_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0422_1.all_core_l1d_mbist_n26_042225_1.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0422_1.all_core_l1d_mbist_n26_042225_1.all_core_l1d_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+
+
+        }
+        suite rv_ccs_CoreClkFnom_tdr_NV_FCap calls TMU.Freq_byPllLockCalc{
+            timingSpec=setupRef(Timings.DEBUG_0429.rv_ccs_CoreClkFmax_tdr_40ns_042925_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0429.rv_ccs_CoreClkFmax_tdr_40ns_042925_2.rv_ccs_CoreClkFmax_tdr_40ns_NV_Pseq);
+            captureSignal =  "pad_jtag_tdo";
+            bypass = true;
+        }
+        suite rcc_ifd_m0_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rcc_ifd_m0_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rcc_ifd_m0_mbist_n26_041725_2.rcc_ifd_m0_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rv_top_sba_pmd_hdr_ovrd_40ns_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0429.rv_top_sba_pmd_hdr_ovrd_40ns_042925_1.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0429.rv_top_sba_pmd_hdr_ovrd_40ns_042925_1.rv_top_sba_pmd_hdr_ovrd_40ns_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+
+        }
+
+        suite rvdds_gdew_pdp_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rvdds_gdew_pdp_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rvdds_gdew_pdp_mbist_n26_041725_2.rvdds_gdew_pdp_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rvgd_fgw_pdp_0_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rvgd_fgw_pdp_0_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rvgd_fgw_pdp_0_mbist_n26_041725_2.rvgd_fgw_pdp_0_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+
+
+            bypass = true;
+        }
+              suite rvgd_fgw_pdp_1_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rvgd_fgw_pdp_1_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rvgd_fgw_pdp_1_mbist_n26_041725_2.rvgd_fgw_pdp_1_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+
+            bypass = true;
+        }
+                suite rvgd_fgw_pdp_2_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rvgd_fgw_pdp_2_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rvgd_fgw_pdp_2_mbist_n26_041725_2.rvgd_fgw_pdp_2_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+
+            bypass = true;
+        }
+                suite rvgd_fgw_pdp_3_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rvgd_fgw_pdp_3_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rvgd_fgw_pdp_3_mbist_n26_041725_2.rvgd_fgw_pdp_3_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+
+            bypass = true;
+        }
+        suite rvgd_fgw_pdp_0_bisr_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0421.rvgd_fgw_pdp_0_bisr_041825_1.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0421.rvgd_fgw_pdp_0_bisr_041825_1.rvgd_fgw_pdp_0_bisr_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rvgd_fgw_pdp_1_bisr_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0421.rvgd_fgw_pdp_1_bisr_041825_1.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0421.rvgd_fgw_pdp_1_bisr_041825_1.rvgd_fgw_pdp_1_bisr_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+
+        suite rvpcs_top0_pdp_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rvpcs_top0_pdp_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rvpcs_top0_pdp_mbist_n26_041725_2.rvpcs_top0_pdp_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rvpcs_top1_pdp_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rvpcs_top1_pdp_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rvpcs_top1_pdp_mbist_n26_041725_2.rvpcs_top1_pdp_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rvpcs_top0_pdp_bisr_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0421.rvpcs_top0_pdp_bisr_041825_1.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0421.rvpcs_top0_pdp_bisr_041825_1.rvpcs_top0_pdp_bisr_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rvpcs_top1_pdp_bisr_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0421.rvpcs_top1_pdp_bisr_041825_1.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0421.rvpcs_top1_pdp_bisr_041825_1.rvpcs_top1_pdp_bisr_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rvhcs_gtop_pdp_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rvhcs_gtop_pdp_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rvhcs_gtop_pdp_mbist_n26_041725_2.rvhcs_gtop_pdp_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rvhms_top_pdp_1_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rvhms_top_pdp_1_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rvhms_top_pdp_1_mbist_n26_041725_2.rvhms_top_pdp_1_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rvhms_top_pdp_0_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rvhms_top_pdp_0_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rvhms_top_pdp_0_mbist_n26_041725_2.rvhms_top_pdp_0_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rvsds_faau_pdp_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rvsds_faau_pdp_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rvsds_faau_pdp_mbist_n26_041725_2.rvsds_faau_pdp_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rva_llch_grid_channel_east_wrapper_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rva_llch_grid_channel_east_wrapper_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rva_llch_grid_channel_east_wrapper_mbist_n26_041725_2.rva_llch_grid_channel_east_wrapper_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rva_llch_grid_channel_west_wrapper_mbist_n26_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0423_Scan.rva_llch_grid_channel_west_wrapper_mbist_n26_041725_2.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0423_Scan.rva_llch_grid_channel_west_wrapper_mbist_n26_041725_2.rva_llch_grid_channel_west_wrapper_mbist_n26_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+        suite rv_mbist_pre_tdr_40ns_NVCopy calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0428_afternoon2.output_rv_mbist_pre_tdr_40ns_042825_1.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0428_afternoon2.output_rv_mbist_pre_tdr_40ns_042825_1.rv_mbist_pre_tdr_40ns_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = false;
+            }
+        suite rcc_core0_ifd_m0_i1_NV calls digital.FunctionalTest_wo_profiling{
+            timingSpec=setupRef(Timings.DEBUG_0426_1_noneDMS.rcc_core0_ifd_m0_i1_042625_1.project_tim_specs);
+            levelSpec=setupRef(Levels.DFT_Vtyp.DFT_Vtyp_specValue);
+            operatingSequence=setupRef(Patterns.DEBUG_0426_1_noneDMS.rcc_core0_ifd_m0_i1_042625_1.rcc_core0_ifd_m0_i1_NV_Pseq);
+            maxFailedCycles=2000;
+            ffvCycles=2000;
+            bypass = true;
+        }
+
+
+
+
+
+    }
+    execute {
+
+
+
+
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rv_mbist_pre_tdr_40ns_NVCopy.execute();
+        rv_ccs_CoreClkFnom_tdr_40ns_NV.execute();
+        rv_ccs_CoreClkFnom_tdr_NV_FCap.execute();
+        //rv_top_sba_pmd_fllbypass_40ns_NV.execute();
+        rv_top_sba_pmd_hdr_ovrd_40ns_NV.execute();
+        all_core_l1d_mbist_n26_NV.execute();
+        rcc_core0_ifd_m0_i1_NV.execute();
+        rcc_ifd_m0_mbist_n26_NV.execute();
+        rvdds_gdew_pdp_mbist_n26_NV.execute();
+        rvgd_fgw_pdp_0_bisr_NV.execute();
+        rvgd_fgw_pdp_1_bisr_NV.execute();
+
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rvpcs_top0_pdp_mbist_n26_NV.execute();
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rvpcs_top1_pdp_mbist_n26_NV.execute();
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rvpcs_top0_pdp_bisr_NV.execute();
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rvpcs_top1_pdp_bisr_NV.execute();
+        rvgd_fgw_pdp_0_mbist_n26_NV.execute();
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rvgd_fgw_pdp_1_mbist_n26_NV.execute();
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rvgd_fgw_pdp_2_mbist_n26_NV.execute();
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rvgd_fgw_pdp_3_mbist_n26_NV.execute();
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rvhcs_gtop_pdp_mbist_n26_NV.execute();
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rvhms_top_pdp_1_mbist_n26_NV.execute();
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rvhms_top_pdp_0_mbist_n26_NV.execute();
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rvsds_faau_pdp_mbist_n26_NV.execute();
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rva_llch_grid_channel_east_wrapper_mbist_n26_NV.execute();
+        rv_mbist_pre_tdr_40ns_NV.execute();
+        rva_llch_grid_channel_west_wrapper_mbist_n26_NV.execute();
+
+
+    }
+}
